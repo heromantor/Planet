@@ -186,16 +186,6 @@ $(function(){
     };
 
 
-	// var hf = function(){
-	// 	var h_footer = $('footer').height();
-	// 	$('.main').css({
-	// 		'paddingBottom': h_footer + 30
-	// 	});
-
-	// }
-
-	// $(window).bind('load resize', hf);
-
 	/* ---------------------------------------------- /*
 	 * Form Styler
 	/* ---------------------------------------------- */
@@ -897,6 +887,7 @@ $(function(){
 	/* ---------------------------------------------- */
 	$('.js-minus').click(function () {
 		var $input = $(this).parent().find('input');
+		var $bNumber = $(this).parent().find('.b-number__count');
 		var count = parseInt($input.val()) - 1;
 		count = count < 1 ? 1 : count;
 		$input.val(count);
