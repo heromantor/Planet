@@ -1,0 +1,161 @@
+.wt-wrap
+	display: flex
+	align-items: flex-start
+	&__left
+		flex: none
+		width: 40%
+		padding-right: $z40
+	&__right
+		flex: 1
+
+	.tabs 
+		box-shadow: none
+	.sort__item
+		background: #FBFCFC
+		&--separat
+			background-color: transparent
+			
+	.box-tab-cont
+		padding: $z30 0
+
+
+.wt-bl 
+	background: #f8f9fa
+	padding: $z30 
+	.title
+		margin-bottom: $z25
+
+.wt-title
+	color: #707e85
+	margin-bottom: $z30
+	
+
+.table-address
+	&--product
+		.table-address-head
+			margin-bottom: 0
+	&-head
+		display: flex
+		align-items: flex-start
+		border-bottom: 1px solid #f1f4f6
+		padding-top: $z5	
+		padding-bottom: $z15	
+		margin-bottom: $z10
+		padding-left: $z28
+	&__th 
+		color: #707e85
+		font-size: $z13
+		&:first-child 
+			margin-left: -$z28
+			margin-right: $z28
+			padding-right: 0 !important
+	&__td
+		display: flex
+		&:last-child .col12
+			padding-right: 0 !important
+		.col12
+			padding-top: $z40 + $z4
+			padding-bottom: $z15
+			font-size: $z13
+
+
+	&__tr
+		display: flex
+		border-bottom: 1px solid #f1f4f6
+		.product__articul 
+			margin-bottom: $z10
+		.product__title
+			margin-bottom: 0
+
+	&-list
+		list-style: none
+		li
+			margin-bottom: $z12
+			position: relative
+			padding-left: $z28
+			&:last-child
+				margin-bottom: 0
+			.styler, .radio, .checkbox
+				position: absolute !important
+				top: 0.093rem !important
+				left: 0
+			.label-text
+				color: $color
+				font-size: $z15	
+				font-weight: 400
+
+	.col1, .col2, .col3,
+	.col11, .col12 
+		padding-right: $z25
+		flex: none
+	.col1 
+		width: 20%
+	.col2 
+		width: 34%
+	.col3 
+		width: 46%
+	.col11 
+		flex: 1
+	.col12
+		width: $z70 + $z50
+
+
+.bl-address
+	display: flex
+	align-items: flex-start
+	margin-bottom: $z20
+	&__content
+		flex: 1
+		padding-top: $z10
+		padding-right: $z30
+		p 
+			color: $color
+			font-size: $z15
+	&__button 
+		flex: none
+
+
+.table-product	
+	display: flex
+	align-items: flex-start
+	padding: $z15 0
+	&__img 
+		height: $z70
+		width: $z70
+		margin-right: $z30
+
+.reauested
+	padding: $z70 $z30
+	
+	
+	&-wrap
+		max-width: $z70 + $z70 + $z70 + $z20 + $z70 + $z70 + $z70 + $z70
+		margin: 0 auto
+		position: relative
+		padding-left: $z60
+		&:after
+			content: ''
+			display: block
+			background: url("../img/ok.svg") no-repeat center
+			background-size: cover
+			width: $z40
+			height: $z40
+			position: absolute
+			left: 0
+			top: -$z6
+
+		.b-btn
+			width: $z70 + $z70 + $z70
+
+
+.row
+	display: flex
+	margin: 0 (-$z15)
+	.col-4 
+		width: 33.33%
+		padding: 0 $z15
+		margin-bottom: $z30
+		h4.title
+			margin-bottom: $z25
+		p 
+			margin-bottom: $z10

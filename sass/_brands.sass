@@ -1,0 +1,131 @@
+
+.brands-popular 
+	&-wrap 
+		display: flex
+		flex-wrap: wrap
+		margin: 0 (-$z10)
+		&__item 
+			width: 16.6666%
+			padding: 0 $z10
+			padding-bottom: $z20
+			text-align: center
+			img 
+				display: inline-block
+				
+
+	& + .line 
+		margin-bottom: $z40
+
+.letters
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin: 0 (-$z8)
+
+	padding: $z10 0 $z30
+
+.letter
+	padding: 0 $z8
+	border-radius: 2px
+	border: solid 1px transparent
+	min-width: $z30
+	font-size: $z15
+	height: $z30
+	line-height: $z30
+	text-align: center
+	display: block
+	font-weight: 500
+	&:hover
+		background-color: #f1f4f6
+		border-color: #0cbaee
+
+.manufacturers
+	padding: $z12 $z30
+	margin: 0 (-$z30)
+	border: 2px solid transparent
+	transition: border-color 0.4s
+	&:hover
+		border-color: $color-info
+		a 
+			color: #1f2528
+	&__letter
+		font-weight: 500
+		margin-bottom: $z15
+		font-size: $z15
+	&__list
+		column-count: 4
+		column-gap: $z40
+		list-style: none
+		li 
+			margin-bottom: $z5
+		a 
+			display: inline-block
+			color: #707e85
+			font-size: $z13
+
+.line 
+	background: #e2e5e7
+	height: 2px
+	clear: both
+	margin: $z20 0
+
+.brand 
+	display: flex
+	align-items: center
+	margin-top: -$z20
+	margin-bottom: $z20
+	&__img
+		width: $z50 + $z50
+		margin-right: $z10
+	&__title
+		.title
+			margin-bottom: 0
+	
+	&-wrap 
+		display: flex
+		align-items: flex-start
+
+		&__left 
+			flex: 1
+			padding-right: $z40
+			column-count: 2
+			column-gap: $z40
+			margin-bottom: $z20
+			.brand-category 
+				display: inline-block
+				vertical-align: top
+				
+		&__right
+			flex: none
+			width: 33%
+			margin-bottom: $z50
+
+.brand-category 
+	margin-bottom: $z25
+	&:hover 
+		.brand-category-list a 
+			color: $color
+	&__title
+		margin-bottom: $z10
+		a
+			font-size: $z15
+			color: $color
+			&:hover
+				text-decoration: underline
+	&-list 
+		list-style: none
+		li 
+			margin-bottom: $z4
+		a 
+			color: #707e85
+			font-size: $z13
+		ul 
+			list-style: none
+			margin-left: $z30
+				
+
+.brand-descr 
+	font-size: $z14
+	line-height: 1.5
+	p 
+		margin-bottom: $z20

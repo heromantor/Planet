@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  viewBox="0 0 14 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Del Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Category" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="category-filter-open-all" transform="translate(-198.000000, -158.000000)">
+            <rect  x="0" y="0" width="320" height="1258"></rect>
+            <g id="Group-4" transform="translate(0.000000, 139.000000)" fill="#FFFFFF">
+                <g id="send" transform="translate(183.000000, 10.000000)">
+                    <g id="Del-Copy-2" transform="translate(10.000000, 6.000000)">
+                        <g id="ic_delete_black_24px" transform="translate(5.000000, 3.000000)">
+                            <path d="M1,14.5 L1,5 L13,5 L13,14.5 C13,15.8761424 11.8761424,17 10.5,17 L3.5,17 C2.12385763,17 1,15.8761424 1,14.5 Z M2,6 L2,14.5 C2,15.3238576 2.67614237,16 3.5,16 L10.5,16 C11.3238576,16 12,15.3238576 12,14.5 L12,6 L2,6 Z M9,-9.99200722e-16 L5,-8.8817842e-16 L5,3 L0,3 L0,4 L6,4 L6,1 L8,1 L8,4 L14,4 L14,3 L9,3 L9,-9.99200722e-16 Z" id="Shape" fill-rule="nonzero"></path>
+                            <rect id="Rectangle" x="5" y="8" width="1" height="5"></rect>
+                            <rect id="Rectangle-Copy" x="8" y="8" width="1" height="5"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

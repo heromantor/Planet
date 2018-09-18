@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="270"  viewBox="0 0 270 270">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="120" height="210" x="22" y="30" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="40"/>
+        <g fill="#202528" transform="matrix(1 0 0 -1 48 187)">
+            <circle cx="14" cy="14" r="4"/>
+            <circle cx="24" cy="14" r="4"/>
+            <circle cx="14" cy="4" r="4"/>
+            <circle cx="4" cy="4" r="4"/>
+            <circle cx="34" cy="14" r="4"/>
+            <circle cx="34" cy="4" r="4"/>
+            <circle cx="24" cy="4" r="4"/>
+            <circle cx="44" cy="14" r="4"/>
+            <circle cx="54" cy="4" r="4"/>
+            <circle cx="54" cy="14" r="4"/>
+            <circle cx="64" cy="14" r="4"/>
+            <circle cx="14" cy="24" r="4"/>
+            <circle cx="4" cy="24" r="4"/>
+            <circle cx="34" cy="24" r="4"/>
+            <circle cx="24" cy="24" r="4"/>
+            <circle cx="44" cy="24" r="4"/>
+            <circle cx="54" cy="24" r="4"/>
+            <circle cx="24" cy="34" r="4"/>
+            <circle cx="34" cy="34" r="4"/>
+            <circle cx="54" cy="34" r="4"/>
+            <circle cx="44" cy="34" r="4"/>
+        </g>
+        <g stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M147 74h101v82H147"/>
+            <path d="M233 130h7v-30h-14v18h-16v12h23zM147 136h49v12h-49M202 136h18v12h-18zM222 82h18v12h-18zM190 118h14v12h-14zM170 118h14v12h-14zM162 82h14v12h-14zM166 100h14v12h-14zM186 100h14v12h-14z"/>
+            <path d="M206 100h14v12h-14zM182 82h14v12h-14zM202 82h14v12h-14zM150 118h14v12h-14zM147 100h13v12h-13M147 82h9v12h-9M226 136h14v12h-14z"/>
+        </g>
+        <rect width="12" height="30" x="76" y="60" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="6"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M82 55V30M82 111V95M228 172h14a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6h-14v-28z"/>
+        <g stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M160 172h44v28h-44a6 6 0 0 1-6-6v-16a6 6 0 0 1 6-6zM204 178h14v16h-14z"/>
+            <path d="M210 181h4v3h-4zM210 188h4v3h-4z"/>
+        </g>
+        <g stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M172 183h5v3h-5v3h5M180 183h5v6h-5v-3zM167 183h2v6M180 186h5"/>
+        </g>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M197 172v28"/>
+    </g>
+</svg>

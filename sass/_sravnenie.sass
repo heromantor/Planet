@@ -1,0 +1,216 @@
+
+.comparison-wrap
+	display: flex
+	&-sidebar
+		width: 25%
+		flex: none
+	&-content
+		max-width: 75%
+		flex: 1
+		
+		
+
+.com-row 
+	width: 33.33%
+	position: relative
+	float: left
+	transition: background 0.4s
+	&--full 
+		width: 66.66%
+		.com-box 
+			box-shadow: none
+		p 
+			font-size: $z13
+			color: #707e85
+			.icon 
+				color: #BBC2C4
+				font-size: $z20
+				margin-left: $z10
+				vertical-align: middle
+
+		.b-btn 
+			margin-top: $z10
+				
+	&:before
+		content: ''
+		display: block
+		border: 2px solid transparent
+		+coverdiv
+		right: 2px
+		transition: border-color 0.4s
+		pointer-events: none
+	.slick-arrow 
+		opacity: 0
+		visibility: hidden
+		transition: all 0.4s
+
+	&:not(.com-row--full):hover
+		background: #F8F9FA
+		&:before
+			border-color: $color-info
+
+		.slick-arrow 
+			opacity: 1
+			visibility: visible
+
+		.b-btn
+			background-color: $color-info
+			border-color: $color-info
+			color: #fff
+			.icon 
+				color: #fff
+
+		.b-number, .b-number input
+			border-color: $color
+			color: $color
+		.b-number button .icon
+			color: $color
+
+		.available
+			background-color: #8fd14f
+			color: #fff
+		.product__icon a:not(.del):not(.add) .icon
+			color: $color
+		.product__icon a.del
+			background: #ff6e6e
+			.icon 
+				color: #fff
+		
+
+.com-box
+	padding: $z30
+	box-shadow: inset -1px 0 0 #f1f4f6, inset  0 1px 0 #f1f4f6
+	
+	&--flex 
+		display: flex
+		flex-direction: column
+		label 
+			margin-top: auto
+			
+	&-button 
+		margin-bottom: $z10
+	h4.title
+		margin-bottom: 0
+		padding: 0 0 $z15
+	span.title 
+		padding: 0 0 $z15
+		margin: 0
+		display: block
+		font-size: 1.25rem
+		text-indent: -999px
+		overflow: hidden
+		
+		
+	&-list 
+		span 
+			display: block
+			font-size: $z15
+			margin: 0 (-$z30)
+			padding: 0 $z30
+			color: #707e85
+			line-height: 2
+			&:nth-child(2n)
+				background: #f1f4f6
+
+	/* Product */
+	.product__content
+		display: flex
+		flex-direction: column
+		height: 100%
+
+	.product__icon
+		justify-content: space-between
+		margin-bottom: $z15
+		flex: none
+	.product__title
+		margin-bottom: $z15
+		height: $z40 + $z6
+		overflow: hidden
+		
+		a 
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+				
+	.product__details
+		flex-wrap: wrap
+	.product__price 
+		flex: 1
+	.product__available
+		width: 100%
+		margin-right: 0
+		margin-bottom: $z15
+		margin-left: -0.3125rem
+	.product__button
+		.b-btn
+			padding: $z2 $z4
+			width: $z36
+			&__text
+				display: none
+				
+			.icon 
+				margin-right: 0
+
+
+.com-slider
+	.slick-dots
+		position: absolute
+		top: 100%
+		left: 0
+		margin-top: $z4
+		right: 0
+
+
+.comparison-column
+	&.slick-slider
+		box-shadow: inset -1px 0 0 #f1f4f6
+	.slick-arrow
+		top: 100px
+		transform: none
+
+	.slick-prev
+		left: -$z25
+	.slick-next
+		right: -$z25
+
+.tab-wrap-header
+	
+	background: #fff
+	a 
+		height: 55px
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			z-index: 1
+			left: 0px
+			right: 0px 
+			bottom: 0
+			height: 4px
+			background-color: $color-info
+	&__text
+		font-size: $z13
+		color: $color
+		display: block
+
+	.badge
+		position: static
+		transform: none
+		margin-right: $z10
+		background-color: $color-info
+	.caret
+		margin-left: $z10
+		margin-top: $z4
+
+.caret
+
+
+	&:before
+		content: ''
+		display: block
+		+arrrem(6,3,$color-info, b)

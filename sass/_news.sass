@@ -1,0 +1,181 @@
+.boxes
+	display: flex
+	margin-bottom: $z40
+	
+	&__news 
+		display: flex
+		flex-direction: column
+		border: solid 1px #e2e5e7
+		padding: 1.45rem 1.875rem 1.875rem
+		width: 41%
+		margin-right: 9%
+	&__article
+		display: flex
+		flex-direction: column
+		border: 1px solid transparent
+		width: 50%
+		padding: 1.45rem 0 1.875rem $z10
+		.article-list
+			display: flex
+			flex-wrap: wrap
+			margin: .04rem (-$z10) 0
+			flex: 1 0 auto
+			&__item
+				display: block
+				padding: 0 $z10
+				width: 50%
+				flex: 1 1 50%
+				-webkit-box-flex: 1 0 auto
+				-webkit-flex: 1 0 auto
+				flex: 1 0 auto
+				-webkit-flex-shrink: 0
+				flex-shrink: 0
+				min-width: 0
+				margin-bottom: $z30
+			&__img 
+				margin-bottom: $z20
+				min-width: 1px
+				width: auto
+			&__text 
+				max-height: $z40
+
+				margin-bottom: 0
+
+	
+
+	.news-list__item
+		flex: 1 0 auto
+		&:last-child
+			border: none
+			
+		&:first-child
+			padding-top: 0
+	.news-list__title
+		+min-screen(1025px)
+			+text-overflow
+
+.news-list
+	display: flex
+	flex: 1 0 auto
+	flex-direction: column
+	&__item 
+
+		padding-top: $z30
+		padding-bottom: $z30
+		border-bottom: 1px solid #f1f4f6
+		&:first-child
+			padding-top: 0
+
+	&__date
+		color: #707e85
+		opacity: 0.4
+		font-size: $z13
+	&__title
+		font-size: $z16
+		line-height: 1.63
+		margin-bottom: $z10
+		a:hover
+			text-decoration: underline
+	&__text
+		color: #707e85
+		font-size: $z14
+		line-height: 1.5
+		margin-bottom: $z10
+		max-height: $z40
+		overflow: hidden
+
+	
+.article-list
+	&__item 
+		display: flex
+		align-items: flex-start
+		padding: $z30 0
+		border-bottom: 1px solid #f1f4f6
+		&:first-child
+			padding-top: 0
+
+	&__img 
+		width: 23.2%
+		min-width: 240px
+		flex: none
+		margin-bottom: 0
+		
+		img
+			width: 100%
+	
+	&__title
+		margin-bottom: $z10
+		font-size: $z16
+		line-height: 1.63
+		a:hover
+			text-decoration: underline
+
+	&__content
+		flex: 1
+		padding-left: $z30
+	&__text
+		color: #707e85
+		font-size: $z14
+		line-height: 1.5
+		margin-bottom: $z10
+		max-height: $z60 + $z3
+		overflow: hidden
+		
+	&__link 
+		color: #707e85
+		font-size: $z13
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			
+
+.link-all 
+	color: #202528
+	font-size: $z15
+	font-weight: 400
+	margin-top: auto
+	padding-top: 0.5rem
+	.icon
+		font-size: $z16
+		color: $color-info
+		margin-left: $z11
+		vertical-align: middle
+	a:hover
+		color: #0cbaee
+		
+
+.post
+	line-height: 1.63
+	p 
+		margin-bottom: $z30
+
+	figure
+		margin: $z50 auto
+		text-align: center
+		
+		img 
+			display: block
+			margin: 0 auto
+
+	figcaption
+		font-size: $z11
+		margin-top: $z15
+		color: #b7bec1
+
+.rubrik
+	margin-top: $z50
+	display: flex
+	justify-content: space-between
+	&-date
+		flex: none
+		color: #b7bec1
+		font-size: $z15
+	&-name
+		margin-left: $z30
+		flex: 1
+		text-align: right
+		
+		a
+			font-size: $z15
+			&:hover
+				color: $color-info

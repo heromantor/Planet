@@ -1,0 +1,796 @@
+.box-category
+	display: flex
+	position: relative
+	z-index: 10
+	flex-wrap: wrap
+	
+.category
+	flex: none
+	background: #646f75
+	width: 25%
+	padding-top: 10px
+	padding-bottom: 10px
+	
+	&-toggle
+		display: flex
+		align-items: center
+		background: #646f75
+		height: $z50
+		padding: 0 $z25
+		cursor: pointer
+		flex: none
+
+		border: 2px solid $color-info
+		&.active
+			.category-toggle__icon-right
+				transform: rotate(90deg)
+		&__icon
+			flex: none
+			font-size: 0
+			.icon
+				height: $z18 + $z1
+				width: $z28
+		&__text
+			flex: 1
+			padding: 0 $z20
+			font-size: $z13
+			line-height: $z13
+			font-weight: 500
+			color: #fff
+			text-transform: uppercase
+			letter-spacing: $z2
+		&__icon-right
+			flex: none
+			font-size: 0
+			transition: transform 0.2s
+			.icon
+				height: $z20
+				width: $z20
+	&-list
+		list-style: none
+		
+		
+		&__item
+			transition: all 0.4s
+			&:after
+				content: ''
+				display: block
+				opacity: 0
+				height: 0.0625rem
+				
+				margin-left: 1.25rem 
+				margin-right: 100%
+				transition: margin-right 7s linear
+				background: $color-info
+			&.current:not(:hover)
+				&:after
+					opacity: 1
+					margin-right: 1.25rem 
+
+
+			&:not(:last-child)
+				.category-list__link
+					&:after
+						content: ''
+						position: absolute
+						bottom: -1px
+						left: 1.25rem 
+						right: 1.25rem 
+						display: block
+						height: 0.0625rem
+						background: rgba(255,255,255, 0.2)
+
+				
+			&:hover
+				background: #fff
+				.category-list__link,
+				.category-list__icon
+					color: #000
+					fill: #000 !important
+			+min-screen(767px)
+				&.dropdown:hover 
+					.category-dropdown
+						opacity: 1
+						top: 0
+					
+
+		&__link
+			padding: 0.632rem 1.25rem 0.632rem 1.3rem
+			font-size: 0.8125rem
+			color: #fff
+			font-weight: 300	
+			display: flex
+			align-items: center
+			height: $z50
+			line-height: 0.8125rem
+			position: relative
+			transition: color 0.4s, background 0.4s
+			&:hover
+				text-decoration: none
+				
+
+		&__icon
+			flex: none
+			display: block
+			line-height: 0
+			font-size: 0
+			color: #fff
+			margin-right: $z16
+			.icon 
+				font-size: 1.75rem
+				
+		&__text
+			display: block
+			flex: 1
+	
+	&-dropdown
+		position: absolute
+		left: 25%
+		top: -9999px	
+		right: 0
+		opacity: 1
+		overflow-y: auto
+		min-height: 100%
+		z-index: 2
+		background: #fff	
+		padding: 1.25rem 1.563rem
+		& > div 
+			column-count: 4
+			column-gap: 0
+			
+.category-body
+	flex: 1
+	overflow: hidden
+	background: #353c41
+	
+	.swiper-container
+		height: 100%
+		min-height: 100%
+	.swiper-slide
+		height: 100%
+		min-height: 100%
+		background: #353c41
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: $z50
+
+	&__img
+		width: 30%
+		margin-left: 8%
+		img 
+			width: 100%
+	&__info
+		width: 50%
+		margin-left: 9%
+	&__title
+		font-size: $z40
+		font-weight: 300
+		line-height: 1.2
+		color: #fff
+		margin-top: 0
+		margin-bottom: $z30
+		&:after
+			content: ''
+			display: block
+			width: $z40
+			height: $z2
+			border-radius: $z2
+			background-color: $color-info
+			margin: $z30 0
+	&__subtitle
+		font-size: $z16
+		line-height: 1.63
+		color: #fff
+		margin-bottom: 0
+		font-weight: 300
+
+.category-card
+	margin-bottom: $z70
+	.swiper-container
+		padding-bottom: 1px
+	.swiper-slide
+		height: auto
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 100%
+			left: 0
+			height: 1px
+			background: $color-info
+			width: 0
+			opacity: 0
+			transition: width 7s linear
+		&-active
+			&:after
+				width: 100%
+				opacity: 1
+		&.over:after
+			height: 0
+
+	+min-screen(1600)
+		.swiper-container
+			overflow: visible
+			
+
+.cat
+	&-box
+		display: inline-block
+		width: 100%
+		margin-right: -4px
+		border-radius: 0.125rem
+		border: solid 0.125rem transparent
+		padding: 0.9375rem 1.25rem
+		transition: border 0.4s
+		overflow: hidden
+		&:hover
+			border-color: #00c5ff
+	&-title 
+		margin: 0 0 $z20
+		font-weight: 400
+		font-size: $z15
+		a
+			color: #202528
+			
+			&:hover
+				text-decoration: underline
+			
+	&-list
+		list-style: none
+		
+		margin-left: -1.25rem
+		margin-right: -1.25rem
+		&__link
+			line-height: 1.15
+			font-size: 0.8125rem
+			color: #707e85
+			display: block
+			padding: $z6 1.25rem
+			&:hover
+				color: #000
+				background: #f1f4f6
+				text-decoration: none
+				
+
+.card-list
+	display: flex
+	width: 100%
+	height: 100%
+	&__item
+		width: 25%
+		padding: $z30
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-content: space-between
+		transition: all 0.4s
+		position: relative
+		background-color: #ffffff
+		&:not(:first-child)
+			border-left: 1px solid #f1f4f6
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: -$z3
+			bottom: 0
+			right: -$z3
+			opacity: 0
+			z-index: 1
+			transition: opacity 0.4s
+			pointer-events: none
+			border: $z3 solid $color-info
+
+		&:first-child
+			&:before
+				left: 0
+
+		&:last-child
+			&:before
+				right: 0
+
+		&:hover
+			&:before
+				opacity: 1
+				
+			.available
+				background-color: #8fd14f
+				color: #fff
+			.card-list-footer__button
+				border-color: #202528
+
+			.card-list-footer__left
+				a .icon
+					color: #202528
+
+	&__title
+		font-size: $z13
+		color: #202528
+		margin-bottom: $z8
+		line-height: 1.2
+		max-height: 2.9rem
+		overflow: hidden
+		font-weight: 400
+
+	&-header
+		display: flex
+		
+		&__info
+			flex: 1
+			padding-right: $z40
+		&__img
+			flex: none
+			width: 24.4%
+			img
+				width: 100%
+
+		.available
+			margin-left: -$z5
+
+	&-main 
+		
+		margin: $z12 0
+		color: #707e85
+		font-size: $z13
+		font-weight: 300
+		line-height: 1.54
+		&__item
+			display: flex
+		&__name
+			width: 38%
+			margin-right: 12%
+		&__info
+			width: 50%
+			+text-overflow
+
+	&-footer
+		display: flex
+		align-items: center
+		&__left
+			flex: none
+			display: flex
+			align-items: center
+			width: 38%
+			margin-right: 12%
+			a 
+				position: relative
+				
+				display: inline-block
+				font-size: 0
+				flex: none
+				margin-right: $z20
+				.icon 
+					color: #b7bec1
+					font-size: $z22
+				&:hover, &.active
+					.icon
+						color: $color-info !important
+
+		&__right
+			width: 50%
+			display: flex
+			align-items: center
+			
+				
+		&__price
+			flex: 1
+			font-size: $z15
+			line-height: 1.33
+			color: #202528
+
+		&__button 
+			position: relative
+			
+			display: flex
+			align-items: center
+			justify-content: center
+			flex: none
+			color: $color-info
+			width: $z36
+			height: $z36
+			font-size: 0
+			line-height: 0
+			border-radius: $z2
+			background-color: #ffffff
+			border: solid 1.2px #b7bec1
+			.icon 
+				color: $color-info
+				height: $z22
+				width: $z22
+			&:hover, &.active
+				background: $color-info
+				color: #fff
+				border-color: $color-info !important
+				.icon 
+					color: #fff
+
+.bonus
+	display: block
+	font-size: $z11
+	color: #707e85
+	white-space: nowrap
+
+.available
+	height: $z21
+	line-height: $z21
+	border-radius: $z2
+	color: #8fd14f
+	font-size: $z13
+	display: inline-block
+	font-weight: 300
+	transition: all 0.4s
+	padding: 0 $z5
+	white-space: nowrap
+	&.active
+		background: #8fd14f
+		color: #fff
+	&--danger
+		color: #f57523
+		&.active
+			color: #fff
+			background: #f57523
+
+
+/* Sort */
+
+.sort
+
+	display: flex
+	border-bottom: 1px solid #f1f4f6
+	&--include 
+		box-shadow: 0 -1px 0 0 #f1f4f6
+	&--scroll
+		.jspVerticalBar
+			display: none
+		.jspPane
+			margin-left: 0 !important
+		.sort__item
+			white-space: nowrap
+		
+	&__item
+		border-right: 1px solid #f1f4f6
+		cursor: pointer
+		flex: none
+		position: relative
+		transition: all 0.4s linear
+		a 
+			height: $z50 + $z5
+			padding: $z2 $z30
+			display: flex
+			align-items: center
+			justify-content: center
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			pointer-events: none
+			left: -1px
+			right: -1px 
+			bottom: 0
+			height: 4px
+			background-color: transparent
+		span 
+			font-size: $z13
+			font-weight: 400
+			color: #707e85
+			.caret
+				&:before
+					content: ''
+					display: inline-block
+					vertical-align: middle
+					+arrrem($z6, $z3, #707e85, b)
+					margin-left: $z5
+				&__desc:before
+					transform: rotate(180deg)
+		.icon 
+			width: $z24
+			height: $z24
+			color: #B7BEC1
+
+		.badge 
+			position: static
+			transform: none
+			margin-left: $z8
+			background: #b7bec1
+			color: #fff
+			font-weight: 300
+		&:last-child
+			border-right: none
+			&:after
+				right: 0
+		&:first-child
+			&:after
+				left: 0
+
+
+
+		&:not(.active) a:hover
+			span:not(.badge), .icon 
+				color: $color-info
+
+
+		&.selected, &.active
+			background: #F8F9FA
+			&:after
+				background-color: $color-info
+			span, .icon 
+				color: $color-info
+			span
+				.caret:before
+					+arrrem($z6, $z3, $color-info, b)
+				
+			.badge
+				background-color: $color-info
+				color: #fff
+
+		&--separat
+			flex: 1
+			
+.boxes-product
+	&--grid
+		display: flex
+		flex-wrap: wrap
+		.product
+			min-width: 0
+			width: 33.33%
+			padding: $z30
+			flex-direction: column
+			align-items: stretch
+			align-content: stretch
+			box-shadow: 0 1px 0 0 #f1f4f6,  1px 0 0 0 #f1f4f6
+			&__img
+				width: $z50 + $z60
+				height: $z50 + $z60
+				flex: none
+				margin-right: 45%
+				margin-bottom: $z15
+			&__content
+				display: flex
+				flex-direction: column
+				align-items: stretch
+				align-content: stretch
+				flex: 1 0 auto
+				
+				
+				
+
+			&__icon
+				position: absolute
+				top: $z30
+				right: $z30
+				
+			&__title
+				flex: none
+				
+				margin-bottom: $z15
+			&__details
+				flex-wrap: wrap
+				flex: none
+				margin-top: auto
+				
+			&__available
+				width: 100%
+				margin-bottom: $z11
+				.available
+					margin-left: -0.3125rem
+			&__count 
+				margin-right: $z10
+			&__price
+				flex: 1
+				margin-right: $z15
+
+			.b-btn
+				padding: $z3
+				width: $z36
+				span:not(.badge)
+					display: none
+				.icon 
+					margin-right: 0
+	
+	&--cart 
+		.product
+			&:hover
+				.b-btn
+					background: transparent
+					border-color: $color
+					&:hover
+						background: #ff6e6e
+						border-color: #ff6e6e
+						.icon 
+							color: #fff
+					.icon 
+						color: $color
+		.product__content
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+		.product__title
+			flex: 1
+			padding-right: $z25
+			padding-top: $z12
+			margin-bottom: 0
+		.product__img 
+			width: $z50 + $z20
+		.b-btn
+			width: $z36
+			padding-left: $z3
+			padding-right: $z3
+			.icon 
+				margin-right: 0
+				color: #B7BEC1
+
+		.product__articul 
+			width: 100%
+
+.product
+	position: relative
+	
+	display: flex
+	padding: $z20 $z30
+	box-shadow: 0 1px 0 0 #f1f4f6, 1px 0 0 0 #f1f4f6
+
+	border: 3px solid transparent
+	&:hover
+		border-color: $color-info
+		.product__icon a
+			.icon 
+				color: $color
+			&:not(.add, .del):hover
+				.icon 
+					color: $color-info
+
+			&.add
+				.icon 
+					color: #fff
+			&.del
+				.icon 
+					color: #f57523
+
+		.b-btn
+			background-color: $color-info
+			border-color: $color-info
+			color: #fff
+			.icon 
+				color: #fff
+
+		.b-number, .b-number input
+			border-color: $color
+			color: $color
+		.b-number button .icon
+			color: $color
+
+		.available
+			background-color: #8fd14f
+			color: #fff
+
+	&__img 
+		flex: none
+		width: $z50 + $z40
+		margin-right: $z30
+		
+		
+	&__content
+		flex: 1
+
+	&__title 
+		font-size: $z13
+		line-height: 1.2
+		margin-bottom: $z24
+		&:hover
+			color: $color
+			text-decoration: none
+			
+	&__details
+		display: flex
+		align-items: center
+	&__available
+		margin-right: $z30	
+	&__price
+		margin-right: $z30
+		white-space: nowrap
+	&__count
+		margin-right: $z20
+	&__icon 
+		flex: 1
+		display: flex
+		align-items: center
+		a 
+			width: $z28
+			height: $z28
+			display: flex
+			align-items: center
+			justify-content: center
+			flex: none
+			margin-right: $z15
+			border-radius: 2px
+			border: 1px solid transparent
+
+			
+			&:last-child
+				margin-right: 0
+			&.add
+				background-color: #f57523
+				.icon 
+					color: #fff
+			&.del 
+				border-color: #ff6e6e
+				
+				.icon 
+					color: #ff6e6e
+				&:hover 
+					background: #ff6e6e
+					.icon 
+						color: #fff !important
+
+			.icon 
+				width: $z20
+				height: $z20
+				color: #BBC2C4
+			
+			
+
+	&__price
+		font-size: $z15
+
+		.bonus
+			display: block
+			color: #707e85
+			font-size: $z13
+
+	&.p-hidden
+		display: none
+		
+
+.articul 
+	color: #707e85
+	font-size: $z11
+	font-weight: 300
+	span
+		color: $color
+	& + .articul
+		margin-left: $z50
+
+.b-number
+	display: inline-flex
+	border-radius: 2px
+	border: 1px solid #e2e5e7
+	height: $z36
+
+	transition: border 0.4s
+	
+	
+	button
+		padding: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: transparent
+		border: none
+		text-align: center
+		
+		width: $z36
+		.icon 
+			color: #B8BFC2
+			font-size: $z13
+			width: 100%
+
+	input 
+		
+		overflow: hidden
+		border: none
+		padding: 0 $z10
+		text-align: center
+		color: #707e85
+		font-size: $z13
+		font-weight: 400
+		font-family: $font-family, Arial, sans-serif
+		border-left: 1px solid #e2e5e7
+		border-right: 1px solid #e2e5e7
+		background-color: transparent
+		width: $z40
+		transition: border 0.4s
+
+

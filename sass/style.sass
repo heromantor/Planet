@@ -1,0 +1,2893 @@
+
+@import variables
+@import lib/base
+@import normalize
+
+
++font('Rubik', 'RubikLight')
+	font-style: normal
+	font-weight: 300
+
++font('Rubik', 'RubikLightItalic')
+	font-style: italic
+	font-weight: 300
+
++font('Rubik', 'Rubik')
+	font-style: normal
+	font-weight: 400
+
++font('Rubik', 'RubikItalic')
+	font-style: italic
+	font-weight: 400
+
++font('Rubik', 'RubikMedium')
+	font-style: normal
+	font-weight: 500
+
++font('Rubik', 'RubikMediumItalic')
+	font-style: italic
+	font-weight: 500
+
++font('Rubik', 'RubikBold')
+	font-style: normal
+	font-weight: 600
+
++font('Rubik', 'RubikBoldItalic')
+	font-style: italic
+	font-weight: 600
+
+
+@import styled
+@import slick
+@import fancybox
+@import popup
+
+/* 3. BASE STYLES
+/* ================================================ */
+
+@import base
+
+/* 3.1. Icons
+     ====================== */
+.ic 
+	position: relative
+	display: inline-block
+	vertical-align: middle
+// 	background: $icons no-repeat
+
+// @each $i in phone, basket, menu, chart-header, contact, phone-call, user, bookmark
+// 	.ic--#{$i}
+// 		+s(ic--#{$i})
+
+
+.icon
+	display: inline-block
+	width: 1em
+	height: 1em
+	stroke-width: 0
+	stroke: currentColor
+	fill: currentColor
+	transition: all 0.4s
+
+
+/* 3.2. Buttons
+     ====================== */
+.btn, a.btn
+	position: relative
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	vertical-align: middle
+	height: $z36
+	padding: 0 $z20
+	color: #fff
+	font-weight: 400
+	font-size: $z15
+	font-family: $font-family, Arial, sans-serif
+	line-height: $z15
+	text-align: center
+	text-decoration: none
+	border: none
+	background-color: $color-info
+	cursor: pointer
+	transition: all 0.2s linear
+	&:hover
+		background-color: darken($color-info, 10%)
+		text-decoration: none
+		color: #fff
+	&--block 
+		display: flex
+		width: 100%
+	&--lg 
+		height: $z50
+		padding-left: $z50
+		padding-right: $z50
+
+	&-text
+		height: $z36
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		vertical-align: middle
+		font-family: $font-family, Arial, sans-serif
+		line-height: $z15
+		font-size: $z15
+		color: $color
+		text-align: center
+		transition: all 0.2s linear
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		&--info 
+			color: $color-info
+		&--lg 
+			height: $z50
+			
+
+
+.b-btn
+	position: relative
+	border: 1px solid #e2e5e7
+	height: $z36
+	border-radius: 2px
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	text-transform: none
+	white-space: nowrap
+	color: #707e85
+	font-size: $z13
+	padding: $z3 $z15
+	font-family: $font-family, Arial, sans-serif
+	font-weight: 300
+	&:hover
+		background: $color-info
+		border-color: $color-info
+		color: #fff
+		.icon 
+			color: #fff
+	.icon
+		width: $z20
+		height: $z20
+		margin-right: $z9
+		color: #B7BEC1
+
+		&-chevrone
+			width: $z24
+		&-basket
+			width: $z18
+			height: $z18
+		&-present
+			width: $z24
+			height: $z24
+	&--basket
+		.icon
+			color: $color-info
+		&:hover 
+			background: $color-info
+			border-color: $color-info
+			color: #fff
+			.icon
+				color: #fff
+	&--clear
+
+		.icon
+			margin-right: $z15
+			color: #ff6e6e
+		&:hover
+			background-color: #ff6e6e
+			border-color: #ff6e6e
+			color: #fff
+			.icon 
+				color: #fff
+
+	&--danger
+		background-color: #ff6e6e
+		border-color: #ff6e6e
+		color: #fff
+		.icon 
+			color: #fff
+
+	&--info
+		background: $color-info
+		border-color: $color-info
+		color: #fff
+		.icon 
+			color: #fff
+
+	&--icon
+		width: $z36 !important
+		padding-left: $z5 !important
+		padding-right: $z5 !important	  
+		.icon
+			margin-right: 0 !important
+
+	&--lg 
+		height: $z40 + $z6
+		padding-left: $z40
+		padding-right: $z40
+		font-size: $z15
+
+.btn-yandex
+	background: #ffcc00
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	padding: $z4 $z30
+	height: $z36
+	color: $color
+	font-family: $font-family, Arial, sans-serif
+	font-size: $z13
+	&--block
+		display: flex
+
+input.btn,
+button.btn 
+	display: inline-block
+	&--block 
+		display: block
+		width: 100%
+	
+
+.btn-group 
+	a.btn, .btn, .btn-text
+		margin-right: $z25
+		&:last-child
+			margin-right: 0
+
+/* 3.3. forms
+     ====================== */
+
+.form 
+	&-wrap 
+		display: flex
+		margin-bottom: $z20
+		&.center
+			align-items: center
+		.form-field
+			flex: 1
+			margin-bottom: 0
+
+	&-column
+		display: flex
+		margin-left: -$z10
+		margin-right: -$z10
+		margin-bottom: $z20
+		.form-field
+			padding: 0 $z10
+			flex: 1
+			margin-bottom: 0
+
+
+	&-field
+		margin-bottom: $z20
+
+		&__link 
+			padding-top: 2.1rem
+			font-size: $z15
+			padding-left: $z25
+			a 
+				color: #707e85
+				&:hover
+					color: $color-info 
+					text-decoration: underline
+				&:focus
+					color: $color
+					
+	&-label
+		color: #707e85
+		font-size: $z13
+		font-weight: 400
+		&.fz15 .label-text
+			font-size: $z15
+		.zw
+			color: #f57523
+
+	&-checkbox, &-radio
+		position: relative
+		padding-left: $z28
+		&.fz15 .label-text
+			font-size: $z15
+		&.inline
+			display: inline-block
+			& + .inline
+				margin-left: $z20
+		.styler, .checkbox, .radio
+			position: absolute !important
+			top: $z3 !important
+			left: 0
+		.label-text
+			color: $color
+
+		&-cont 
+			padding-left: $z28
+			padding-top: $z5
+	&-input 
+		display: block
+		width: 100%
+		height: $z40 + $z6
+		padding: 0 $z15
+		color: $color
+		font-style: normal
+		font-weight: normal
+		font-size: $z15
+		line-height: $z15
+		font-family: $font-family, Arial, sans-serif
+		border: 1px solid #b7bec1
+		background-color: #fff
+		border-radius: $z4
+		&:disabled
+			background: #f8f9fa
+		&:focus
+			background-color: #fff
+		&.error
+			background-color: rgba(208, 2, 27, 0.1)
+			border-color: #d0021b
+		&--grey 
+			background-color: #F6F6F6
+			&:focus 
+				background-color: #fff
+		+placeholder
+			color: #b7bec1
+		+placeholder-color(#b7bec1)
+
+input[type="checkbox"],
+input[type="radio"]
+	display: none
+	&:checked
+		& ~ .checkbox
+			background: url("../img/chbx-act.svg") no-repeat center
+			background-size: cover
+			border-color: $color-info
+		& ~ .radio
+			border-width: $z5
+			border-color: $color-info
+
+		& ~ .label-text
+			color: $color
+.checkbox, 
+.radio
+	top: -1px
+	display: inline-block
+	position: relative
+	overflow: hidden
+	
+	vertical-align: middle
+	width: $z16
+	height: $z16
+	margin: 0 4px 0 0
+	border: 1px solid #b7bec1
+	background: #fff
+	cursor: pointer
+
+.checkbox
+	border-radius: 3px
+
+.radio
+	border-radius: 50%
+
+input[type="search"]
+	-webkit-appearance: none
+
+::-ms-clear
+	width: 0
+	height: 0
+
+textarea.form-input 
+	height: auto
+	min-height: $z50 + $z50 + $z38
+	padding-top: $z15
+	resize: none
+	
+label 
+	display: block
+	font-weight: 400
+	margin-bottom: 2px
+	&.error
+		color: #d0021b
+		font-size: $z13
+		padding-left: $z15
+		padding-top: $z4
+	&.valid 
+		color: #8fd14f
+		font-size: $z13
+		padding-left: $z15
+		padding-top: $z4
+		
+	
+
+.box-checkbox
+	display: inline-block
+	vertical-align: top
+	cursor: pointer
+	margin-right: $z6
+	white-space: nowrap
+	margin-bottom: $z3
+	.jq-checkbox, .checkbox
+		margin-right: 2px
+	
+
+	.styler.checked, input:checked
+		& ~ .label-text
+			color: $color
+	.styler.disabled, input:disabled 
+		& ~ .label-text
+			color: #b7bec1
+
+
+
+.label-text
+	color: #707e85
+	font-size: $z13
+	line-height: 1.23
+	a 
+		color: $color-info
+		text-decoration: underline
+		
+
+.group-input
+	display: flex
+	margin-left: -$z10
+	margin-right: -$z10
+	margin-bottom: $z28
+	input 
+		height: $z36
+		border: 1px solid #e2e5e7
+		background-color: #fff
+		padding: 0 $z15 0 $z35
+		border-radius: $z4
+		width: 100%
+		font-family: $font-family, Arial, sans-serif
+		font-size: $z13
+		color: $color
+		+placeholder
+			color: #B7BEC1
+		+placeholder-color(#B7BEC1)
+	&__field
+		flex: 1
+		width: 50%
+		padding-left: $z10
+		padding-right: $z10
+		position: relative
+	&__label-text
+		position: absolute
+		top: $z10
+		left: $z20
+		font-size: $z13
+		color: $color
+		font-weight: 400
+		margin: 0
+		display: block
+		pointer-events: none
+		
+.slider-range
+	margin-bottom: $z13
+
+.bl-tel-mask
+	position: relative
+	
+	&:after
+		content: '+7'
+		display: block
+		font-size: $z15
+		
+		color: $color
+		position: absolute
+		top: $z14
+		left: $z15
+
+	.form-input 
+		padding-left: $z35
+		
+.tel-mask 
+	font-family: monospace!important
+
+
+.req 
+	display: flex
+	align-items: flex-start
+	&-input
+		flex: 1
+	&-cont
+		margin-left: $z20
+		flex: none
+		width: $z70 + $z70 + $z30
+		display: flex
+		align-items: center
+		flex-direction: column
+		min-height: $z40 + $z6
+		.form-field
+			margin-bottom: $z12 !important
+	&-valid
+		color: #8fd14f
+		font-size: $z15
+	&-link
+		font-size: $z15
+		color: #f57523
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			
+		
+
+	
+/* 4. HEADER
+/* ================================================ */
+
+@import header
+
+/* 5. CONTENT
+/* ================================================ */
+.main
+	width: 100%
+	min-width: 320px
+	text-align: left
+	padding-bottom: $z30
+	&-header
+		background: #fff
+		padding: $z24 $z30
+	&-wrap
+		display: flex
+		align-items: flex-start
+		.content
+			margin-left: 0 !important
+			margin-right: 0 !important
+
+		.content-wrap 
+			padding: $z30
+			width: auto
+			
+			
+.title-wrap 
+	display: flex
+	align-items: center
+	padding: $z20
+	background: #fff
+	border-bottom: 1px solid #f1f4f6
+	.title
+		flex: 1
+		margin-bottom: 0
+
+
+
+
+.content 
+	background: #fff
+	flex: 1
+	&.pb0 
+		padding-bottom: 0
+	
+	
+	&-wrap 
+		width: 74.2%
+		margin: 0 auto
+		padding: $z70 $z30 $z30
+
+	.m-content
+		margin-left: -$z30
+		margin-right: -$z30
+		.sort 
+			margin: 0
+
+	&-login 
+		padding: $z25 0
+		border-bottom: 1px solid #f1f4f6
+		p 
+			font-size: $z13
+			color: $color
+			margin-bottom: 0
+			a 
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+
+.c-container
+	padding: $z60 ($z60 + $z60)
+		
+
+#map 
+	height: 6.25rem * 6
+
+
+
+
+/* 3.1. Contacts
+     ====================== */
+
+.contacts
+	max-width: 87%
+	margin: 0 auto
+	padding: $z70 $z30
+	&-wrap
+		display: flex
+		align-items: flex-start
+		
+		&__left
+			width: 43%
+			margin-right: 10%
+			background: #646f75
+			padding: $z35 $z35
+			color: #fff
+		&__right
+			width: 47%
+			p
+				line-height: 1.75
+				margin-bottom: $z30
+				&:last-child 
+					margin-bottom: 0
+		&__title
+			font-weight: 500
+			font-size: $z20
+			margin: 0 0 $z32
+
+
+.address-wrap 
+	display: flex
+	flex-wrap: wrap
+	margin: 0 (-$z15)
+	.address-bl
+		width: 50%
+		padding: 0 $z15
+		&:last-child
+			margin-bottom: 0
+		&--full
+			width: 100%
+.address-bl
+	margin-bottom: $z30
+	&__title
+		margin-bottom: $z12
+		padding-left: $z24
+		position: relative
+		&-text
+			color: #e9f3f7
+			font-size: $z14
+			font-weight: 300
+		&-icon
+			position: absolute
+			top: $z3
+			left: 0
+			color: $color-info
+			font-size: $z16
+	&__content
+		padding-left: $z24
+		line-height: 1.63
+
+.ymaps-2-1-68-image 
+	width: $z40 + $z40 + $z40 + $z20  + $z2 !important
+	height: $z40  !important
+	background-size: cover !important
+	background-repeat: no-repeat !important	 
+
+/* 3.2. Category
+     ====================== */
+@import category
+
+
+/* 3.3. Card
+     ====================== */
+@import card
+
+
+/* 3.4. News and Article
+     ====================== */
+@import news
+
+/* 3.5. Brands
+     ====================== */
+@import brands
+
+/* 3.6. Favorites
+     ====================== */
+@import favorites
+
+/* 3.7. Sravnenie
+     ====================== */
+@import sravnenie
+
+/* 3.8. Search
+     ====================== */
+@import search
+
+/* 3.9. Error
+     ====================== */
+@import error
+
+/* 4.0. Payment
+     ====================== */
+@import payment
+
+/* 4.1. Login
+     ====================== */
+@import login
+
+/* 4.1. Autorized
+     ====================== */
+@import autorized
+
+
+
+/* 5. SIDEBAR
+/* ================================================ */
+.sidebar 
+	flex: none
+	width: 24%
+	margin-left: $z20
+	min-width: 240px
+	&-bl 
+		background: #fff
+
+	&__title
+		color: #707e85
+		font-size: $z13
+		text-transform: uppercase
+		font-weight: 300
+		padding: $z20
+		.b-btn 
+			float: right
+			margin-top: -$z10
+
+		& + .sidebar-list
+			padding-top: 0
+			margin-top: -$z10
+
+	&-list
+		padding: $z5 $z20 
+		&__item 
+			border-bottom: 1px solid #f1f4f6
+			height: $z50
+			display: flex
+			align-items: center
+			font-size: $z13
+			&:last-child
+				border-bottom: none
+			& > span 
+				display: block
+				&:first-child
+					flex: 1
+					padding-right: $z20
+				&:last-child
+					text-align: right
+					flex: none
+
+			a 
+				display: flex
+				align-items: center
+				.icon 
+					width: $z18
+					height: $z20
+					flex: none
+					margin-right: $z8
+				&:hover
+					text-decoration: underline
+
+				
+	&-content
+		padding: $z20
+	&-login 
+		padding: $z20
+		border-bottom: 1px solid #f1f4f6
+		&.non-br
+			border: none
+			p 
+				margin-bottom: $z25
+		p 
+			font-size: $z13
+			color: $color
+			margin-bottom: 0
+			a 
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+
+		.bl-checkbox
+			margin-top: $z15
+			margin-bottom: $z15
+		.bl-bonus
+			margin-bottom: $z20
+
+	.boxes-button
+		padding: $z20 $z20
+
+	textarea.form-input
+		min-height: $z70 + $z25
+
+.boxes-button
+	padding: $z30 $z30
+
+
+
+.sidebar--iphone-hidden.hide-sidebar
+	display: none !important
+					
+
+.check-list
+	list-style: none
+	&__item
+
+		label 
+			display: flex
+			align-items: flex-start
+			padding: $z16 $z20
+			margin-bottom: 0
+			cursor: pointer
+			transition: all 0.4s
+			
+			position: relative
+			&:before
+				content: ''
+				display: block
+				+coverdiv
+				border: 2px solid transparent
+				z-index: 1
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: -2px
+				left: $z20
+				right: $z20
+				height: 1px
+				box-shadow: 0 1px 0 #f1f4f6
+			&:hover
+				&:before
+					border-color: $color-info
+			.styler, input, .checkbox, .radio
+				flex: none
+				margin-right: $z12
+				margin-bottom: 0
+				top: 0
+				&.checked, &:checked 
+					& ~ .label-text
+						color: #202528
+					& ~ .badge
+						background: $color-info
+			.label-text
+				color: #707e85
+				flex: 1
+				font-size: $z13
+
+			.badge 
+				top: 50%
+				right: $z20
+				transform: translate(0,-50%)
+				background: #b7bec1
+		
+
+		&--all
+			margin-top: $z15 
+			label
+				.label-text
+					font-size: $z15 
+
+				&:after
+					display: none
+
+.filter
+	&-wrap
+		&__item
+			position: relative
+			box-shadow: 0 1px 0 0 #f1f4f6
+			border: 2px solid transparent
+			&:hover
+				border-color: $color-info
+				.filter-wrap__settings
+					opacity: 1
+		&__head
+			
+			padding: $z13 $z15 $z13 $z56 
+			cursor: pointer
+			.filter-wrap__tag
+				display: block
+				
+			&.open 
+				.filter-wrap__title
+					color: $color
+				.icon-right
+					color: $color-info
+					transform: rotate(90deg)
+				.filter-wrap__tag
+					display: none
+					
+			.icon-right
+				position: absolute
+				top: $z8
+				left: $z16
+				color: #B9BFC2
+				width: $z24
+				height: $z24
+		&__title
+			font-size: $z11
+			color: #707e85
+			padding-right: $z60
+
+			text-transform: uppercase
+		
+		&__settings
+			position: absolute
+			top: $z11
+			right: $z15
+			opacity: 0
+			z-index: 1
+
+		&__tag
+			font-size: 0
+			margin-left: -$z30
+			span 
+				display: inline-block
+				vertical-align: top
+				color: #fff
+				font-size: $z11
+				padding: 0 $z4
+				line-height: $z18 + $z1
+				height: $z18
+				background: $color-info
+				border-radius: 2px
+				margin-top: $z5
+				margin-right: $z5
+
+		&__body
+			padding: 0 $z20 $z15
+
+.setting-icon
+	cursor: pointer
+	margin-right: $z10
+	position: relative
+	
+	&:last-child
+		margin-right: 0
+	.icon
+		color: #707E85
+	.icon-dustbin
+		height: $z13
+		width: $z10
+	.icon-check-box
+		height: $z13
+		width: $z14
+
+
+
+
+/* 6. FOOTER
+/* ================================================ */
+.footer
+	min-width: 320px
+	background: #2e3b44
+	
+	color: #b7bec1
+
+	&-wrap 
+		position: relative
+		padding: $z60 0
+		display: flex
+		flex-wrap: wrap
+		&__item 
+			padding-bottom: $z20
+			padding-top: $z20
+			width: 25%
+			padding-right: $z50
+		&__title
+			font-size: $z14
+			font-weight: 500
+			color: #707e85
+			margin-bottom: $z35
+
+	&-logo
+		margin-bottom: $z30
+		&__slogan
+			color: #fff
+			font-size: $z11
+			font-weight: 300
+			margin-top: $z10
+			display: block
+		img 
+			width: $z50 + $z50 + $z25
+			
+	&-list
+		list-style: none
+
+		&__item
+			margin-bottom: $z15
+			&:last-child
+				margin-bottom: 0
+		&__link
+			font-size: $z14
+			color: #fff
+			font-weight: 300
+			&:hover
+				text-decoration: underline
+				color: #0cbaee
+	
+	.up	
+		position: absolute
+		right: 0
+		bottom: 0
+		display: block
+		font-size: 0
+		.icon
+			height: $z50
+			width: $z50
+			color: #b7bec1
+
+		&:hover .icon
+			color: #0CBAEE 
+
+
+.copyright
+	line-height: 1.46
+	font-size: $z13
+	font-weight: 300
+	margin-bottom: $z40
+
+
+
+
+.payment
+	display: inline-flex
+	align-items: center
+	margin: 0 (-$z8)
+
+	a 
+		display: block
+		padding: 0 $z8
+
+.visa 
+	img
+		width: $z40 + $z6
+		height: $z16
+
+.master 
+	img
+		width: $z39
+		height: $z24
+
+.mir 
+	img
+		width: $z50 + $z3
+		height: $z16
+
+
+
+/* 7. MEDIA
+/* ================================================ */
+
+@media screen and (min-width: 1921px)
+
+	html 
+		font-size: 20px
+	
+@media screen and (min-width: 2600px)
+
+	html 
+		font-size: 27px
+	
+@media screen and (min-width: 3200px)
+
+	html 
+		font-size: 34px
+
+@media screen and (min-width: 4000px)
+
+	html 
+		font-size: 38px
+
+@media screen and (min-width: 1600px)
+	.wrapper, 
+		max-width: 84%
+		width: auto
+
+	.page-error
+		max-width: 75%
+		width: auto
+		
+		
+
++screen(1600px, 1700px)
+
+	/* Category ============== */
+	.boxes-product--grid, .com-box
+		.product__available
+			width: 40%
+			margin-right: 0
+		.product__price
+			width: 50%
+			text-align: right
+			margin-right: 0
+			margin-left: 10%
+			flex: auto
+			margin-bottom: 0.6875rem
+		.product__button
+			margin-left: auto
+
+	
+			
++max-screen(1599px)
+	.wrapper
+		max-width: none
+
+
+	/* Header ================= */
+	.header-top, 
+	.header-bottom
+		.wrapper
+			padding-left: 0
+			padding-right: 0
+
+	/* Content ================= */
+	.box-category,
+	.category-card,
+	.category-toggle, 
+	.top-line, 
+	.content, 
+	.main-wrap,
+	.wrapper >  .title-wrap
+		margin-left: -$z34
+		margin-right: -$z34
+
+	.content-wrap 
+		max-width: 940px
+		width: auto
+
+	.main-wrap
+		.content-wrap 
+			max-width: none
+
+	.top-line-position
+		left: 0
+		right: 0
+
+	/* Contacts ================= */
+	.map-container
+		padding-top: $z50	
+
+	.contacts
+		max-width: 1170px
+
+	/* Payment ================= */
+	.table-address
+		&-list li 
+			.label-text
+				font-size: $z13
+			.styler
+				top: 0 !important
+		.col1, .col2, .col3
+			width: 33.33%
+	
+	/* Sravnenie ================= */
+	.comparison-column.slick-slider
+		margin-right: $z30
+
+	/* Fancybox ================= */
+	
+	#fancybox-thumbs ul li a 
+		width: 80px !important
+		height: 60px !important
+
+
++max-screen(1500px)
+
+	/* Category ================= */
+	.boxes-product--grid, .com-box
+		.product__available
+			width: 40%
+			margin-right: 0
+		.product__price
+			width: 50%
+			text-align: right
+			margin-right: 0
+			flex: auto
+			margin-left: 10%
+			margin-bottom: 0.6875rem
+		.product__button
+			margin-left: auto
+
+	
+		
++max-screen(1200px)
+	.hidden-1200
+		display: none !important
+
+	/* Header ================= */
+	.logo, .nav-top__item
+		margin-right: 2.188rem
+
+	.navbar__link
+		padding-left: 1.25rem
+		padding-right: 1.25rem
+
+	/* Category ================= */
+	.category
+		width: 300px
+		&-dropdown
+			left: 300px
+			& > div 
+				column-count: 3
+		&-body
+			&__img
+				margin-left: 0
+				width: 35%
+			&__title
+				font-size: $z30
+
+	.card-list
+		&__item
+			width: 33.33%
+
+	.product__price, 
+	.product__available
+		margin-right: 1.25rem
+
+	.boxes-product--grid 
+		.product
+			width: 50%
+			&__price
+
+	.boxes-product--cart 
+		.product__content
+			display: block
+		.product__title
+			padding-right: 0
+			margin-bottom: $z20
+		.product__details
+			justify-content: flex-end
+			flex-wrap: nowrap
+				
+
+	/* Content ================= */
+	.top-line .category-toggle
+		width: calc(300px + 2px)
+		&__text
+			font-size: $z12
+
+	.main-wrap .content-wrap
+		padding-top: $z30
+		padding-bottom: $z30
+
+	.content-wrap
+		padding-top: $z40
+		padding-bottom: $z30
+
+	.c-container
+		padding-left: $z70
+		padding-right: $z70
+	/* Sidebar ================= */
+
+	.title-wrap
+		.b-btn 
+			padding-left: $z3
+			padding-right: $z3
+			width: $z36
+			&__text
+				display: none
+			.icon 
+				margin-right: 0
+	
+	/* News ================= */
+
+	.boxes__news
+		margin-right: 5%
+		width: 45%
+
+	/* Contacts ================= */
+	.contacts-wrap
+		&__left
+			margin-right: 5%
+			width: 48%
+
+	/* Sravnenie ================= */
+	.com-row
+		width: 50%
+		&--full 
+			width: 50%
+
+	/* Payment ================= */
+	.table-address
+		&-list li .label-text
+			font-size: $z13
+		.col1
+			width: 35%
+		.col2 
+			display: none
+		.col3 
+			width: 65%
+
+		.ipad-h
+			display: none
+			
+		&__td-ct
+			flex-direction: column
+			.col12
+				&:first-child
+					order: 1
+					padding-top: 0
+				&:last-child
+					padding-bottom: $z5
+
+	/* Autorized ================= */
+	.order
+		&-content
+			&__right
+				padding-left: $z70
+
+
+
++min-screen(1025px)
+	/* News ================= */
+	.boxes__article.hide, 
+	.boxes__news.hide
+		position: static
+		opacity: 1
+		visibility: visible
+		height: auto
+		z-index: 0
+	.boxes-tab-list
+		display: none
+		
++max-screen(1024px)
+	body
+		padding-top: $z50 + $z40
+		&.page-inner
+			padding-top: $z50 + $z40 + $z50
+			
+
+	.hidden-ipad, *[data-tooltip]:before, *[data-tooltip]:after
+		display: none !important
+
+	.fancybox-margin
+		margin-right: 0
+
+	h4.title
+		margin-bottom: $z30
+
+	.title-wrap 
+		border-bottom: 1px solid #f1f4f6
+		padding: $z10 $z20 
+		margin-bottom: 0
+
+	.table-wrap__th, .table-wrap__td
+		padding: $z20 $z12
+
+	.wrapper
+		padding-left: $z20
+		padding-right: $z20
+
+	.breadcrumbs
+		padding-left: $z20
+		padding-right: $z20
+		&-list
+			&__item
+				padding-left: 1.5rem
+				&:not(:first-child):after
+					left: 0.663rem
+			&__link, &__title
+				font-size: $z12
+
+	.steps 
+		&__item
+			padding-left: $z30
+			&:first-child
+				padding-left: $z15
+
+
+	
+	/* Header ================= */
+
+	.navbar
+		&__item:last-child
+			border-right: none
+		&__link
+			height: $z50
+
+	
+
+	/* Content ================= */
+	.box-category,
+	.category-card,
+	.category-toggle, 
+	.top-line, 
+	.content, 
+	.main-wrap,
+	.content .m-content,
+	.wrapper >  .title-wrap
+		margin-left: -$z20
+		margin-right: -$z20
+
+	.main-wrap .content-wrap
+		padding-top: $z30
+		padding-bottom: $z30
+		padding-left: $z20 
+		padding-right: $z20 
+
+	.content-wrap, .search-result, .boxes-bonus,
+	.boxes-fill-m
+		padding-left: $z20 
+		padding-right: $z20 
+
+	.content
+		.steps
+			margin-left: -$z20
+			margin-right: -$z20
+			margin-top: -$z30
+			border-top: none
+			border-left: none
+			border-right: none
+	/* Contacts ================= */
+	#map 
+		height: 480px
+	.contacts
+		max-width: 77%
+
+		&-wrap
+			display: block
+			
+			&__left
+				width: auto
+				margin-right: 0
+				margin-bottom: $z70
+			&__right
+				width: auto
+				
+
+
+	/* Category ================= */
+
+	.header-top-line
+		top: $z50 + $z40
+
+	.category
+		padding-top: 5px
+		padding-bottom: 5px
+		&-list 
+			&__link 
+				padding: 0.432rem 1.25rem 0.432rem 1.3rem
+				height: 3rem
+		&-dropdown
+			& > div 
+				column-count: 2
+
+		&-body 
+			.swiper-slide
+				display: block
+				padding: $z20 $z70 $z25
+			&__img
+				width: auto
+				margin: 0 0 $z20
+				max-width: 206px
+			&__info
+				width: auto
+				margin-left: 0
+
+	.card-list
+		&__item
+			width: 50%	
+
+	.product
+		padding: $z20
+		&__details
+			flex-wrap: wrap
+		&__icon
+			width: 50%
+			flex: none
+			margin-bottom: $z8
+		&__available
+			width: 50%
+			margin-right: 0
+			text-align: right
+			margin-bottom: $z8
+
+		&__price
+			flex: 1
+
+	.boxes-product--grid 
+		.product
+			padding: $z20
+			&__icon
+				width: auto
+				right: $z20
+			&__available
+				text-align: left
+
+	.boxes-product--cart 
+		.product__img
+			width: $z50 + $z40
+			margin-right: $z20 
+		.product__available
+			width: auto
+			margin-right: $z15
+		.product__details
+			justify-content: flex-end
+			flex-wrap: nowrap
+		.product__price
+			flex: none
+		.product__title
+			margin-bottom: $z15
+	.box-tags
+		display: none
+		
+	.sort__item a 
+		padding-left: $z20
+		padding-right: $z20
+
+	/* Sidebar ================= */
+	.sidebar 
+		margin-left: 0
+		border: 1px solid #f1f4f6
+		&__title .b-btn
+			padding-left: $z7
+			padding-right: $z7
+			width: $z36
+			&__text
+				display: none
+			.icon 
+				margin-right: 0
+		&-login 
+			padding: $z20
+
+
+
+
+	.filter-wrap__head
+		padding-left: $z40
+		padding-right: 0 
+		.icon-right
+			left: $z8
+
+	.check-list__item label
+		margin-left: -1px
+
+
+	/* Autorized ================= */
+	.bl-massg
+		padding: $z20 
+	.order
+		padding: $z20
+		&-content
+			&__right
+				padding-left: $z50
+		&-button .available
+			top: $z24
+			right: $z20
+	/* News ================= */
+	.boxes
+		display: block		
+		&__news, &__article
+			border: none
+			padding: 0
+			width: auto
+			margin: 0
+
+		.title-line
+			display: none
+
+		.news-list
+			&__item
+				padding-top: $z25
+				padding-bottom: $z25
+				&:first-child
+					padding-top: 0
+
+		&-tab-list
+			list-style: none
+			display: flex
+			margin-bottom: $z28
+			&__item
+				margin-right: $z50
+				&.active .boxes-tab-list__link
+					border-color: $color-info
+					color: $color-info
+
+			&__link
+				font-size: $z20
+				display: block
+				color: $color
+				padding-bottom: $z8
+				border-bottom: $z2 solid transparent
+				&:hover
+					text-decoration: none
+
+	.article-list
+		display: flex
+		flex-wrap: wrap
+		margin-left: -$z9
+		margin-right: -$z9
+		&__item 
+			display: block
+			border-bottom: none
+			width: 50%
+			padding: 0 $z9
+			margin-bottom: $z30
+		&__content 
+			padding-left: 0
+		&__img 
+			margin-bottom: $z20
+			min-width: 1px
+			width: auto
+
+	/* Payment ================= */
+
+	.wt-wrap
+		display: block
+		&__left
+			padding-right: 0
+			width: auto
+			margin-bottom: $z40
+
+	.table-product__img
+		display: none
+		
+	.table-address .col12
+		width: $z70 + $z40
+
+	.reauested
+		padding: $z70 $z30
+		
+		
+		&-wrap
+			max-width: none
+
+	.row
+		display: block
+		.col-4
+			width: auto
+			&:last-child
+				margin-bottom: 0
+
+
+	/* login ================= */
+
+	.c-login-flex
+		display: block
+		&__item
+			width: auto
+			
+		
+
+	/* Card ================= */
+	.card 
+		&__title
+			padding: $z20
+		&-wrap 
+			padding-left: $z20
+			padding-right: $z20
+			padding-bottom: $z30	
+	.card-slider
+		width: 49%
+
+	.card-details
+		padding-left: $z20
+		&__left
+			padding-right: $z15
+		&__right
+			min-width: 1px
+			width: 41%
+
+	.card-count
+		display: block
+		.b-number
+			margin-right: 0
+			margin-bottom: $z8
+
+		.b-btn
+			width: 114px
+			padding-left: $z9
+			padding-right: $z9
+
+	.cd-slider-nav .slick-slide
+		margin-left: $z5	
+		margin-right: $z5
+
+	.specs-container
+		padding: $z25 $z20
+	.specs-content, .specs-aside
+		margin-right: 0
+	.specs-content
+		padding-right: $z20
+	.specs-td
+		word-wrap: break-word
+	.specs-td:first-child
+		width: 60%
+	.specs-td:last-child
+		width: 40%
+		padding-right: 0
+	.specs-tr
+		border-bottom: 1px solid  #f1f4f6
+		padding-bottom: $z7
+		margin-bottom: $z7
+		&:last-child
+			border: none
+			margin-bottom: 0
+			padding-bottom: 0
+	.access
+		&__sidebar
+			width: 230px
+	.sec-text
+		padding-left: 0
+		padding-right: 0
+
+	/* Brands ================= */
+
+	.manufacturers
+		margin-left: -1.25rem
+		margin-right: -1.25rem
+		padding-left: 1.25rem
+		padding-right: 1.25rem
+		&__list
+			column-gap: $z20
+
+	.letters
+		margin: 0 (-$z4)
+	.letter
+		padding: 0 $z4
+		min-width: $z26
+
+	.line 
+		height: 1px
+		margin: $z10 0 $z20
+
+	/* Favorites ================= */
+	.favorites-zero
+		padding: $z30 $z20
+
+	/* Sravnenie ================= */
+
+	.comparison-wrap-sidebar
+		width: 32%
+
+	.comparison-wrap-content
+		max-width: 68%
+	.com-box 
+		padding: $z20
+		.product__available
+			width: auto
+			text-align: left
+		.product__price
+			flex: auto
+			margin-right: 0
+			margin-bottom: 0.9375rem
+			text-align: right
+		.product__count
+			margin-left: auto
+			
+		.product__button 
+			margin-left: 0
+		.product__icon 
+			width: 100%
+		.product__details
+			align-items: flex-start
+
+		&-list 
+			span 
+				margin: 0 (-$z20)
+				padding: 0 $z20
+
+	.com-slider 
+		.slick-dots
+			margin-top: 0
+		.slick-arrow
+			display: none
+			
+	
+	/* Error ================= */
+
+	.page-error
+		display: block
+		text-align: center
+		padding: 8rem $z50
+		&__img 
+			margin-bottom: $z30
+			img 
+				margin: 0 auto
+		&__content
+			padding-left: 0
+
+
+	/* Fancybox ================= */
+
+	.fancybox-nav
+		width: 60px
+	.fancybox-type-image .fancybox-skin
+		padding: 0 60px !important
+	
+
+	.fancybox-next
+		right: -60px
+	.fancybox-prev 
+		left: -60px
+
+	#fancybox-thumbs ul li 
+		a 
+			width: 100px !important
+			height: 80px !important
+
+	/* Footer ================= */
+
+	.footer-wrap__item
+		padding-right: $z25
+		&:last-of-type
+			padding-right: 0
+
+	.footer .up
+		display: none		
+
++min-screen(768px)
+	.navbar-mobile, .visible-iphone, .js-check-list, .sort--scroll .jspHorizontalBar
+		display: none !important
+
+	.sidebar--iphone-hidden, .tg-hide, .js-bx-wrapper
+		display: block !important
+
+	.sort--scroll, .sort--scroll .jspContainer, .sort--scroll .jspPane
+		width: auto !important
+
+	
+		right: 0
+		left: 0
+
+	.sort--scroll .jspContainer
+		height: $z50 + $z6 !important
+		
+
+		
+		
+		
+
++max-screen(767px)
+	body 
+		padding-top: $z50
+		&.page-inner
+			padding-top: $z50 + $z32
+		&.menu-open 
+			padding-top: $z50
+			background-color: #646f75
+			.header-bottom
+				box-shadow: none
+			.nicescroll-rails 
+				display: none !important
+				 
+		&.category-open 
+			background-color: #fff
+			.category-list__item.open
+				box-shadow: none
+	.wrapper > .title-wrap 
+		border-bottom: none
+	.title-wrap
+		padding: $z12 $z10
+		background: #fff
+
+	.title-inline
+		display: block
+		margin-left: 0
+
+	h4.title 
+		.links
+			margin-left: auto
+
+
+			
+		
+	.lines--c-icon li
+		padding-right: $z50
+	.wrapper
+		padding-left: $z10
+		padding-right: $z10
+
+	.hidden-iphone
+		display: none !important
+
+	
+
+	.pagination-arrow, 
+	.pagination
+		padding-left: $z20
+		padding-right: $z20
+
+	.pagination-list__link
+		width: $z38
+
+	.breadcrumbs
+		width: auto
+
+	.form-column
+		display: block
+		margin-bottom: 0
+		.form-field
+			margin-bottom: $z20
+
+	.table-wrap__th, .table-wrap__td
+		padding: $z8
+		.word-break, a.noowrap
+	.table-wrap__th--all, .table-wrap__td--all
+		display: block
+		padding: $z8 0 $z8 $z8!important
+		.table-wrap__th, .table-wrap__td
+			width: auto !important
+			padding: 0
+			display: block
+			&:first-child
+				padding-left: 0
+	
+	.table-wrap .col31
+		width: 26%
+		min-width: 80px
+			
+	.b-train__icon
+		margin-left: $z5
+
+	.ifz12
+		font-size: $z12
+
+	.btn-group 
+		a.btn, .btn, .btn-text
+			margin-bottom: $z10
+
+	
+	/* Header ================= */
+	.header-top-wrap
+		padding-left: 0.9375rem
+		padding-right: 0.9375rem
+		height: 2rem
+
+	.header-bottom-wrap
+		padding-left: 0.9375rem
+		position: relative
+	
+	.logo
+		width: 103px
+		margin-right: 0.625rem
+		img 
+			width: 6.2rem
+
+	.navbar-toggle
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #fff
+		font-size: 1.1rem
+		&.open
+			background: #646f75
+	
+		
+	.nav-top 
+		&__item
+			margin-right: 0
+			height: 2rem
+			line-height: 2rem
+		&--right
+			margin-right: -0.9375rem
+			.nav-top__link
+				height: 2rem
+				line-height: 2rem
+				display: block
+				padding: 0 0.9375rem
+				&:hover
+					background: #0cbaee
+					text-decoration: none
+
+	.navbar__item 
+		border: none
+	.navbar__link
+		height: 3.125rem
+		padding-left: 0.9375rem
+		padding-right: 0.9375rem
+
+	.navbar-mobile
+		background: #646f75
+		width: 100%
+		position: relative
+		z-index: 11
+
+		overflow-y: auto
+		
+		&-list
+			list-style: none
+			&__search
+				padding: 0.625rem 0.9375rem
+				.search__input
+					height: 1.9rem
+					background: transparent
+					border: none
+					color: #fff
+					padding-left: $z30
+					font-size: 0.9375rem
+					font-weight: 300
+					&:focus 
+						padding-left: $z10
+						background: #fff
+						color: $color
+						+placeholder
+							color: #b7bec1
+					+placeholder
+						color: #fff
+						font-weight: 300
+				.search__icon
+					position: absolute
+					top: 50%
+					right: auto
+					left: .8375rem
+					font-size: 0
+					transform: translate(0, -50%)
+					.icon
+						width: $z20
+						height: $z20
+						color: #fff
+			&__item
+				position: relative
+				border-bottom: 0.0625rem solid rgba(255,255,255,0.2)
+				&--white
+					border-bottom-color: #f1f4f6
+					.navbar-mobile-list__link
+						background: #fff
+						color: #707e85
+
+				.badge
+					top: 50%
+					transform: translate(0, -50%)
+					right: 0.9375rem
+				&.c-icon 
+					.navbar-mobile-list__link
+						padding-left: ($z40 + $z5)
+				
+			&__link
+				
+				font-size: 0.9375rem
+				color: #fff
+				font-weight: 300
+				padding: 0.875rem 3.75rem 0.875rem .8375rem
+				display: block
+				&:hover
+					text-decoration: none
+					
+				.icon 
+					position: absolute
+					top: 50%
+					left: .8375rem
+					margin-top: -2px
+					transform: translate(0, -50%)
+					width: $z20
+					height: $z20
+					&-show-menu 
+						height: $z16
+						
+						width: $z22
+
+
+
+	/* Category ================= */
+	
+	.header-top-line
+		top: $z50
+	.top-line
+		display: block
+		.category-toggle
+			display: none
+
+	.category
+		width: 100%
+		margin-bottom: $z40
+		padding-top: 0
+		padding-bottom: 0
+		&-toggle
+			border: solid 2px #0cbaee
+			&.open
+				background: #2e3b44
+		&-body 
+			display: none
+		&-card
+			display: none
+			
+		&-dropdown
+			padding: 1rem 1rem
+
+		&.open
+			margin-bottom: 0
+			.category-list
+				margin: 0
+				// display: none
+				 
+				&__item:not(.open)
+					display: none
+				&__icon 
+					display: none
+				&__link:before
+					content: ''
+					background: url('../img/forw.svg') no-repeat center
+					width: $z17
+					height: $z12
+					display: inline-block
+						
+		&-list
+			margin-top: 0
+			margin-bottom: 0		
+			&__item
+				&:after
+					display: none
+					
+				&.open 
+					box-shadow: 0 1px 1px 0 rgba(112, 112, 112, 0.5)
+					&:after
+						display: none
+						
+					.category-list__link
+						background-color: #f1f4f6
+						height: 56px
+						color: #707e85
+						font-weight: 400
+					.category-dropdown
+						position: static
+						height: auto
+						
+				&.current:not(:hover) 
+					.category-list__link
+						border-color: transparent
+				&:not(:last-child):after
+					margin-left: 0
+					margin-right: 0
+
+			&__link
+				border: none !important
+				padding-left: $z15
+				padding-right: $z15
+				position: relative
+				z-index: 2
+				&:before
+					margin-right: $z10
+
+	.check-list__item label
+		margin-left: 0
+
+
+	.sort
+		&--scroll
+			&.jspScrollable
+				overflow-x: auto
+			.sort__item
+				white-space: nowrap
+		&__item
+			flex: 1
+			&--list, &--grid
+				display: none
+			
+			a
+				padding-left: $z10
+				padding-right: $z10
+			span 
+				color: #707e85
+				font-weight: 400
+			.icon 
+				color: #707e85
+				width: $z20
+				height: $z20
+				margin-left: $z12
+			.badge
+				display: none
+				
+	/* Content ================= */
+	.box-category,
+	.category-card,
+	.category-toggle, 
+	.top-line, 
+	.content,
+	.content .m-content,
+	.main-wrap,
+	.wrapper >  .title-wrap
+		margin-left: -$z10
+		margin-right: -$z10
+
+	.main-wrap
+		display: block
+		&.filter-open
+			.content
+				padding-bottom: 0
+		&.reverse
+			display: flex
+			flex-direction: column
+			.content
+				order: 1
+				width: 100%
+
+	.content
+		&-wrap 
+			padding: $z20 $z10 !important
+
+
+
+		&-login 
+			padding: $z20 $z10
+			border-bottom: 1px solid #f1f4f6
+
+	
+
+	.search-result, .sidebar-content, .c-container, .boxes-bonus,
+	.boxes-fill-m
+		padding: $z20 $z10
+
+	.boxes-button
+		padding: $z15 $z10
+
+	/* Sidebar ================= */	
+	.sidebar
+		width: 100%
+		margin-left: 0
+		border-left: none
+		border-right: none
+		&--iphone-hidden
+			display: none
+		&__title
+			padding: $z20 $z10
+		&-toggle
+			cursor: pointer
+			width: 100%
+			background: #fff
+			padding: 1.03rem $z20
+			text-align: center
+			box-shadow: inset 0 -1px 0 0 #f1f4f6
+			span
+				font-size: $z13
+				&:after
+					content: ''
+					display: inline-block
+					vertical-align: middle
+					+arr(6, 3, #707e85, b)
+					margin-left: $z5
+		&-list 
+			padding: 0 $z10
+					
+		&-login
+			padding: $z20 $z10
+			&.visible-iphone
+				border-bottom: 1px solid #f1f4f6
+				p 
+					margin-bottom: 0
+
+		.boxes-button
+			padding: $z15 $z10
+			
+	.filter
+		.sidebar__title
+			text-align: right
+			padding: $z10
+			.b-btn 
+				float: none
+				margin-top: 0
+				width: auto
+				padding: 0.1875rem 0.8125rem
+				&__text 
+					display: block
+				.icon 
+					margin-right: $z6
+
+
+	.title-wrap
+		.b-btn 
+			padding-left: $z15
+			padding-right: $z15
+			width: auto
+			&__text
+				display: block
+			.icon 
+				margin-right: $z10
+
+
+	/* Contacts ================= */
+	.map-container
+		padding-top: $z34
+
+	.contacts
+		max-width: none
+		padding: 0 $z20 $z40
+		&-wrap 
+			&__left
+				margin-left: -$z20
+				margin-right: -$z20
+				padding: $z30 $z20
+				margin-bottom: $z40
+
+	/* Autorized ================= */
+	.bl-massg
+		padding: $z20 $z10 
+	.order
+		padding: $z20 $z10
+		&__title
+			padding-right: 0
+		&-content
+			display: block
+			&__left
+				width: auto
+				max-width: none
+				min-width: 1px
+				margin-bottom: $z20
+			&__right
+				padding-left: 0
+		&-info__product
+			padding-right: 0
+			box-shadow: none
+			padding: $z10 0
+			.order-available
+				margin-top: $z4
+		.available, .order-available
+			position: static
+
+		&-available
+			margin-left: -0.3125rem	
+
+	.boxes-bonus
+		display: block
+		&__content
+			padding-right: 0
+			margin-bottom: $z20
+
+	/* News ================= */
+	.boxes
+		margin-bottom: $z20
+
+		.news-list
+			margin-bottom: $z15
+			&__item
+				padding-top: $z15
+				padding-bottom: $z15
+		
+	.article-list, 
+	.boxes__article .article-list
+		display: block
+		&__item
+			width: auto
+			
+	
+	.post 
+		line-height: 1.5
+		font-size: $z14
+		h4.title
+			font-size: $z16
+			margin-bottom: $z20
+		p 
+			margin-bottom: $z20
+
+		figure
+			margin: $z30 auto
+
+	.rubrik 
+		margin-top: $z30
+		display: block
+		&-name
+			margin-left: 0
+			margin-top: $z7
+			max-width: 100%
+			text-align: left
+
+
+	/* Payment ================= */
+	.wt-wrap
+		.tabs 
+			margin-left: -$z10
+			margin-right: -$z10
+		.box-tab-cont
+			padding-top: $z20
+			padding-bottom: $z20
+		.pagination
+			padding-left: $z28
+
+	.bl-address
+		display: block
+		
+		margin-bottom: $z20
+		&__content
+			
+			padding-top: 0
+			padding-right: 0
+
+	.table-address--product
+		.table-address-head
+			display: none
+			
+	.table-address__tr
+		flex-wrap: wrap
+		&:last-child
+			border-bottom: none
+		
+	.table-address .col11
+		width: 100%
+		flex: none
+		padding-right: 0
+
+	.table-address .col12
+		padding-top: 0
+		width: auto
+	.table-address__td
+		width: 50%
+		&:last-child
+			
+			justify-content: flex-end
+
+	.table-address-list
+		.table-address__td
+			width: 100%
+			&:last-child
+			
+				justify-content: flex-start
+
+	.table-address__td-ct
+		flex-direction: row
+		width: 50%
+		.col12
+			width: auto
+			
+	
+	.reauested
+		padding: $z40 $z20
+		
+		&-wrap
+			max-width: none
+			padding-left: 0
+			.title
+				padding-left: $z60
+
+			.b-btn
+				width: $z70 + $z70
+
+	/* login ================= */
+
+
+
+	.req
+		display: block
+		&-input 
+			margin-bottom: $z20
+		&-cont
+			margin-left: 0
+			min-height: 1px
+			width: auto
+			flex-direction: row
+			.form-field
+				width: $z70 + $z60 
+				margin-bottom: 0 !important
+				margin-right: $z15
+
+
+		
+	/* Card ================= */
+
+	.card 
+		&__title
+			font-size: $z20
+			padding: $z15 $z10
+
+		&-wrap 
+			display: block
+			margin-bottom: 0
+			padding-left: $z10
+			padding-right: $z10
+			padding-bottom: 0	
+		&-slider
+			width: auto
+			max-width: none
+			margin-bottom: $z15	
+			.slick-dots
+				position: absolute
+				bottom: $z10
+				width: 100%
+
+		&-details
+			display: block
+			width: auto
+			padding-left: 0
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				z-index: 1
+				pointer-events: none
+				width: $z10
+				right: -$z10
+				background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff)
+			&__left
+				padding-right: 0
+				&-flex
+					display: flex
+					
+					margin-left: -$z5
+					padding-left: $z5
+					padding-bottom: $z10
+					margin-right: -$z10 
+			&__right
+				width: auto
+				display: flex
+				flex-wrap: wrap
+				margin-left: -$z10
+				margin-right: -$z10
+				box-shadow: inset 0 1px 0 0 rgba(204, 204, 204, 0.5)
+				padding: $z20 $z10
+
+		&-icon 
+			order: 1
+			width: 100%
+			br 
+				display: none
+			.data-link
+				margin-right: $z20
+			.data-link__text
+				display: none
+				
+			.data-link__icon
+				margin-right: 0
+				.icon
+					color: $color
+		&-count, &-price
+			order: 2
+				
+		&-count 
+			display: flex
+			align-items: center
+			margin-left: auto
+			margin-bottom: 0
+			.b-number
+				margin-bottom: 0
+			
+		&-price
+
+			margin-bottom: 0
+		&-button 
+			margin-left: $z30
+
+				
+		&-descr 
+			width: 45%
+			flex: none
+			padding-right: $z30
+			
+			
+			li 
+				display: block
+			&__title
+				display: block
+				padding-right: 0
+			&__text
+				display: block
+				padding-right: 0
+				.available
+					margin-left: -0.3125rem	
+		&-params 
+			flex: 1
+			padding-right: $z10
+			white-space: nowrap
+
+		.tab-wrap
+			margin-bottom: -$z20
+
+	.tabs-title
+		padding-left: $z10
+		padding-right: $z10
+	
+	.cd-slider
+		margin-bottom: 0
+	.cd-slider-nav
+		display: none
+		
+	.specs-container
+		padding: 0
+		flex-direction: column
+	.specs-content
+		order: 1
+		width: 100%
+		margin-right: 0
+		padding: $z20 $z10
+	.specs-aside
+		margin: 0 0  $z10
+		width: 100%
+		padding: $z20 $z10
+	
+	
+	.access
+		display: block
+		&__sidebar
+			width: auto
+			
+	/* Brands ================= */
+
+	.brands-popular
+		display: none
+	.line 
+		display: none
+		
+	.sec-title
+		margin-bottom: $z15
+	.letters
+		padding-top: 0
+		padding-bottom: $z20
+
+	.letter
+		min-width: $z30
+		padding-left: $z8
+		padding-right: $z8
+
+	.manufacturers
+		margin-left: -0.625rem
+		margin-right: -0.625rem
+		padding-left: 0.625rem
+		padding-right: 0.625rem
+		&__list
+			column-count: 2
+	
+	.brand
+		margin-top: -$z10
+	.brand-wrap
+		display: block
+		&__left 
+			padding-right: 0
+		&__right
+			width: auto
+			margin-bottom: $z30
+
+	/* Sravnenie ================= */
+
+	.comparison-wrap
+		overflow-x: auto
+		
+	.comparison-wrap-sidebar
+		width: 150px
+
+	.comparison-wrap-content
+		max-width: 100%
+		
+	.comparison-column
+		display: flex
+	.com-row
+		width: 300px !important
+		flex: none
+	.com-box 
+		padding: $z15 $z10
+		h4.title, span.title
+			font-size: $z16
+
+		&-list 
+			span
+				font-size: $z13
+				line-height: 1.4 
+				margin: 0 (-$z10)
+				padding: $z5 $z10
+				word-wrap: break-word
+				&:nth-child(2n)
+					background: #f1f4f6
+		&--flex
+			.b-btn--basket
+				display: none
+				
+			.b-btn 
+				padding: $z2 
+				width: $z36
+				&__text
+					display: none
+					
+				.icon 
+					margin-right: 0
+
+			.label-text
+				font-size: $z12
+
+
+
+
+	/* Error ================= */
+
+	.page-error
+		padding: 5rem $z30
+		&__img 
+			margin-bottom: $z30
+			img 
+				margin: 0 auto
+				max-width: 100px
+		&__content
+			h1 
+				font-size: $z20
+			p 
+				font-size: $z14
+
+	/* Fancybox ================= */
+	
+	#fancybox-thumbs ul li 
+		padding: 0 $z5
+		&.active
+			border: none
+			padding: 0 $z5
+			a 
+				background-color: $color-info
+		a 
+			width: 10px !important
+			height: 10px !important
+			background: rgba(0,0,0,0.1)
+			border-radius: 50%
+
+			img 
+				display: none
+
+	.fancybox-nav
+		width: 60px
+	.fancybox-type-image .fancybox-skin
+		padding: 0 0px !important
+
+
+	.fancybox-next
+		display: none
+		
+	.fancybox-prev 
+		display: none
+		
+
+	/* Footer ================= */	
+	.footer
+		&-wrap
+			padding-top: $z30
+			padding-bottom: $z10
+			justify-content: center
+			&__item
+				width: 50%
+				padding-top: $z30
+				padding-bottom: $z30
+				&:nth-child(3), &:first-child, &:nth-child(5)
+
+					padding-right: 0
+				&:first-child
+					order: 1
+					text-align: center
+					
+
+
+				&:last-of-type
+					padding-right: 1.563rem
+
+			&__title
+				font-size: $z13
+				margin-bottom: 1.8rem
+		&-list 
+			&__item 
+				margin-bottom: .9rem
+				line-height: 1
+			&__link
+				font-size: $z13
+
+		&-logo, .copyright
+			margin-bottom: $z15
+		&-logo, .visa
+			img
+				margin: 0 auto 
+	.overlay.open 
+		display: none !important
+
++max-screen(560px)
+
+	/* Popup ================= */
+	.window
+		&-wrap
+			padding: $z20
+			&.text-center
+				.window-title
+					padding-right: 0
+		&-title
+			padding-right: $z40
+		&-form
+			.btn 
+				width: 100%
+				display: flex
+
+	.form-field
+		&__link
+			font-size: $z11
+			padding-left: $z15
+
+	.radio-tabs
+		display: block
+		&__item 
+			padding-right: 0
+			margin-bottom: $z15
+			&:last-child
+				margin-bottom: 0
+
+	
+	/* Category ================= */
+	.category-dropdown
+		&>div
+			column-count: 1
+
+	.boxes-product--grid
+		display: block
+		.product
+			width: auto
+			padding: $z20 $z10
+			&__img
+				margin-right: auto
+				margin-bottom: $z20
+
+			&__icon 
+				position: static
+				width: 40%
+			&__available
+				text-align: right
+				width: 60%
+				margin-bottom: $z15
+			&__price
+				margin-left: 0
+				margin-bottom: 0
+				text-align: left
+				flex: 1
+				width: auto
+				
+				margin-right: $z10
+			&__count 
+				margin-right: $z30
+
+	.boxes-product--cart 
+		.product__img
+			margin-right: auto
+		.product__title
+			padding-top: $z8
+		.product__details
+			flex-wrap: wrap
+		.product__available
+			width: 100%
+			margin-right: 0
+			margin-left: 0
+			order: 1
+		.product__count
+			order: 3
+		.product__price
+			order: 2
+			flex: 1
+		.product__button 
+			order: 3
+
+	.articul + .articul 
+		margin-left: $z30
+	.product
+		display: block
+		padding: $z20 $z10
+		&__img 
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: $z20
+		&__icon, &__available
+			margin-bottom: $z15
+		&__count
+			margin-right: $z30
+		&__price
+			margin-right: $z10
+
+		.b-btn
+			width: $z36
+			padding: 0 
+			&__text
+				display: none
+				
+			.icon
+				margin-right: 0
+
+	/* Contacts ================= */
+	.address-wrap
+		display: block
+		.address-bl 
+			width: auto
+			&--full
+				width: auto
+				
+
+	/* Card ================= */
+	.card
+		&-price
+			font-size: $z15
+			margin-bottom: 0
+		&-button 
+			margin-left: $z20
+			.b-btn
+				width: $z36
+				padding-left: $z5
+				padding-right: $z5
+				&__text
+					display: none
+				.icon 
+					margin-right: 0
+
+
+	/* Brands ================= */
+
+	.manufacturers__list, .brand-wrap__left
+		column-count: 1
+		column-gap: 0

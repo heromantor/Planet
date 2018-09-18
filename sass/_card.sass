@@ -1,0 +1,307 @@
+
+
+.card 
+	&__title
+		font-size: $z30
+		margin: 0
+		font-weight: 400
+		padding: $z30
+	&-wrap
+		display: flex
+		padding: 0 $z30 $z35
+	&-slider
+		width: 42.6%
+		// max-width: 606px
+		flex: none
+		
+	&-details
+		display: flex
+		width: 55%
+		flex: 1
+		padding-left: $z30
+		&__left
+			padding-right: $z30
+			flex: 1
+		&__right
+			width: 40%
+			min-width: 260px
+
+	&-descr
+		list-style: none
+		margin-bottom: $z20
+		li 
+			display: flex
+			align-items: center
+			font-size: $z13
+			line-height: 1.54
+			.available
+				margin-top: $z8
+
+		&__title
+			padding-right: $z10
+			color: #707e85
+			width: $z50 + $z50
+
+	&-params 
+		&__title
+			color: #707e85
+			font-size: $z13
+			line-height: 1.54
+			display: block
+		&-list
+			list-style: none
+			li 
+				font-size: $z13
+				line-height: 1.54
+
+	&-price
+		font-size: $z30
+		margin-bottom: $z20
+		white-space: nowrap
+		.bonus
+			font-size: $z13
+			color: #f57523
+			
+	&-count 
+		display: flex
+		margin-bottom: $z50
+		.b-number
+			margin-right: $z20
+	&-button 
+		.b-btn
+			background: $color-info
+			border-color: $color-info
+			color: #fff
+			.icon 
+				color: #fff
+
+	&-icon
+		.data-link 
+			margin-bottom: $z16
+
+	.sort
+		border-top: 1px solid #f1f4f6
+
+
+
+.data-link
+	display: inline-flex
+	align-items: center
+	color: #707e85
+	&__icon 
+		width: $z28
+		height: $z28
+		display: flex
+		align-items: center
+		justify-content: center
+		flex: none
+		margin-right: $z8
+		border-radius: 2px
+	&__text
+		font-size: $z13
+		
+	.icon 
+		width: $z20
+		height: $z20
+		color: #BBC2C4
+	&.add
+		.data-link__icon
+			background-color: #f57523
+			.icon 
+				color: #fff
+	&:hover
+		color: $color
+		.icon
+			color: $color
+	
+
+.cd-slider
+	margin-bottom: $z10
+	img 
+		width: 100%
+
+.cd-slider-nav 
+	text-align: center
+	padding: 0 $z40
+	margin: 0 auto
+	.slick-slide
+		margin: 0 $z7
+		width: $z40 + $z5
+		overflow: hidden
+		border: 3px solid transparent
+		&.slick-current
+			border-color: $color-info
+		img
+			width: 100%
+
+	.slick-arrow
+		background-color: transparent
+		width: auto
+		height: auto
+		.icon 
+			color: #202528
+			width: $z16
+			height: $z11
+	.slick-prev
+		left: 0
+	.slick-next
+		right: 0
+.tabs-title
+	margin: 0
+	font-size: $z20
+	padding-bottom: $z30
+	padding-top: $z30
+	padding-left: $z30
+	padding-right: $z30
+
+.box-tab-cont
+	.boxes-product
+		border-top: 1px solid #f1f4f6
+		margin: 0
+	.all-product
+		margin-left: -$z30
+		margin-right: -$z30
+	.progress
+		margin-left: -$z26
+		margin-right: -$z26
+		margin-top: $z5
+		margin-bottom: $z5
+
+.all-product
+	font-size: $z15
+	color: $color-info
+	display: block
+	padding: $z25 $z30
+	text-align: center
+	.icon 
+		color: $color-info
+		font-size: $z16
+		vertical-align: middle
+		margin-left: $z13
+	.icon-arrow-forward
+		transform: rotate(-90deg)
+
+
+
+
+.progress 
+	display: block
+	width: 100%
+	height: $z4
+	overflow: hidden
+	background-color: #fff
+	background-image: linear-gradient(to right, $color-info, $color-info)
+	background-repeat: no-repeat
+	background-size: 0 100%
+
+	transition: background-size .4s ease-in-out
+.sr-only
+	position: absolute
+	width: 1px
+	height: 1px
+	padding: 0
+	margin: -1px
+	overflow: hidden
+	clip: rect(0,0,0,0)
+	border: 0
+
+
+
+.boxes-product.slick-slider
+
+	.slick-track
+		display: flex
+	.slick-slide
+		height: auto
+		display: flex
+		margin-bottom: 1px
+		box-sizing: border-box
+
+
+/* Аксессуары */
+.access
+	display: flex
+	&__sidebar
+		width: $z50 + $z50 + $z50 + $z50 + $z50 + $z50 + $z10
+		flex: none
+		border-right: 1px solid #f1f4f6
+		.check-list
+			&__item:first-child
+				label
+					&:after
+						display: none
+						
+	&__content
+		flex: 1
+		.boxes-product
+			margin: 0
+
+/* Спецификация */
+.specs-container
+	display: flex
+	align-items: flex-start
+	padding: $z30
+	h4 
+		font-size: $z20
+		font-weight: 400
+		margin: 0 0 $z16
+.specs-content
+	flex: 1
+	margin-right: 5%
+.specs-aside
+	flex: none
+	width: 40%
+	margin-right: 5%
+	background: #f1f4f6
+	padding: $z30
+	&-list
+		list-style: none
+		margin-top: $z30
+		li 
+			color: #707e85
+			font-size: $z15
+			margin-bottom: $z10
+			position: relative
+			padding-left: $z22
+			&:before
+				content: '—'
+				display: block
+				position: absolute
+				left: 0
+				top: 0
+
+			&:last-child
+				margin-bottom: 0
+
+
+.specs-table
+	margin-bottom: $z30
+	&:last-child
+		margin-bottom: 0
+
+.specs-tr
+	display: flex
+	margin-bottom: $z10
+	&:last-child
+		margin-bottom: 0
+.specs-td 
+	width: 50%
+	padding-right: $z20
+	font-size: $z15
+	color: #707e85
+	span 
+		display: block
+		margin-bottom: $z10
+		&:last-child
+			margin-bottom: 0
+
+/* Section  Text */
+.sec-text
+	margin-top: $z30
+	padding: 0 $z30
+	font-size: $z13
+	line-height: 1.85
+	color: #707e85
+	&>*:last-child
+		margin-bottom: 0
+

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="270"  viewBox="0 0 270 270">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="81" cy="262" r="3" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51 207H33V78c0-5.523 4.477-10 10-10h123m71 79v60H111M111 207h155a3 3 0 0 1 0 6H111m-60 0H4a3 3 0 0 1 0-6h47"/>
+        <path fill="#0CBAEE" d="M115 206h40v2a2 2 0 0 1-2 2h-36a2 2 0 0 1-2-2v-2z"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51 197h-6V82h121m59 65v50H111"/>
+        <g fill="#202528" transform="translate(101 120)">
+            <circle cx="4" cy="14" r="4"/>
+            <circle cx="14" cy="14" r="4"/>
+            <circle cx="24" cy="4" r="4"/>
+            <circle cx="24" cy="14" r="4"/>
+            <circle cx="34" cy="4" r="4"/>
+            <circle cx="44" cy="14" r="4"/>
+            <circle cx="24" cy="24" r="4"/>
+            <circle cx="34" cy="24" r="4"/>
+            <circle cx="44" cy="24" r="4"/>
+            <circle cx="24" cy="34" r="4"/>
+            <circle cx="34" cy="34" r="4"/>
+            <circle cx="44" cy="34" r="4"/>
+            <circle cx="54" cy="34" r="4"/>
+            <circle cx="64" cy="34" r="4"/>
+        </g>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M61 177h40v78H61z"/>
+        <g stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M73 214l6-6M83 224l6-6M72 225l18-18"/>
+        </g>
+        <g stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M212 70l6-6M222 80l6-6M211 81l18-18"/>
+        </g>
+        <rect width="50" height="106" x="56" y="163" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="6"/>
+        <g stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(171 1)">
+            <circle cx="49" cy="134" r="3"/>
+            <path d="M8 16h82v111H8z"/>
+            <rect width="98" height="141" rx="6"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="31px" viewBox="0 0 19 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card--photo-HD" transform="translate(-219.000000, -475.000000)">
+            <rect x="0" y="0" width="1920" height="1185"></rect>
+            <g id="Group-Copy" transform="translate(229.000000, 491.000000) scale(-1, 1) translate(-229.000000, -491.000000) translate(179.000000, 111.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <g id="zoom-copy" transform="translate(20.000000, 349.000000)">
+                    <g id="forw-copy">
+                        <g id="ic_keyboard_arrow_right_white_24px">
+                            <polygon id="Shape" points="21.475 42.15 32.925 30.675 21.475 19.2 25 15.675 40 30.675 25 45.675"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="270"  viewBox="0 0 270 270">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="140" height="210" x="32" y="30" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="4"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M177 176h71v-29h-7c-6.627 0-12-5.373-12-12s5.373-12 12-12h7V94h-71"/>
+        <circle cx="157" cy="45" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle cx="157" cy="225" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle cx="47" cy="45" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle cx="157" cy="155" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M187 171v-9a5 5 0 1 0-10 0v9M204 171v-9a5 5 0 1 0-10 0v9M221 171v-9a5 5 0 1 0-10 0v9"/>
+        <circle cx="47" cy="155" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle cx="47" cy="225" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M118.424 147.24C137.97 140.445 152 121.86 152 100c0-27.614-22.386-50-50-50s-50 22.386-50 50c0 21.403 13.448 39.665 32.355 46.797"/>
+        <circle cx="102" cy="100" r="10" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M101.5 170H152v40H52v-40h3"/>
+        <g fill="#202528" transform="translate(88 176)">
+            <circle cx="14" cy="4" r="4"/>
+            <circle cx="34" cy="4" r="4"/>
+            <circle cx="44" cy="4" r="4"/>
+            <circle cx="14" cy="14" r="4"/>
+            <circle cx="24" cy="14" r="4"/>
+            <circle cx="44" cy="14" r="4"/>
+            <circle cx="4" cy="24" r="4"/>
+            <circle cx="14" cy="24" r="4"/>
+            <circle cx="34" cy="24" r="4"/>
+            <circle cx="24" cy="24" r="4"/>
+        </g>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M130.229 119.356l1.414 1.414-51.778 68.636c-4.339 5.752-12.52 6.897-18.272 2.558-.483-.365-.94-.762-1.368-1.19-5.095-5.095-5.095-13.356 0-18.45.428-.428.885-.826 1.368-1.19l68.636-51.778z"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M177 110h10v37h-10M194 110h27v37h-27z"/>
+        <circle cx="239" cy="167" r="3" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+</svg>

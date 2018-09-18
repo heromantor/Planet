@@ -1,0 +1,122 @@
+
+.bl-massg
+	padding: $z20 $z30
+	box-shadow: 0 1px 0 #f1f4f6
+	p 
+		font-size: $z13
+		margin-bottom: 0
+		a 
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+				
+.order
+	position: relative
+	border: 3px solid transparent
+	box-shadow: 0 1px 0 #f1f4f6
+	padding: $z30
+	&:hover
+		border-color: $color-info
+
+		.available
+			background: #8fd14f
+			color: #fff
+			&--danger
+				color: #fff
+				background: #f57523
+
+		.b-btn 
+			background: $color-info
+			border-color: $color-info
+			color: #fff
+
+	&__title
+		font-size: $z20
+		font-weight: 400
+		margin-bottom: $z20
+		padding-right: $z70 + $z50
+		position: relative
+		
+		a:hover
+			text-decoration: underline
+
+		.order-available
+			position: absolute
+			top: $z2
+			right: 0
+			
+	&-content
+		display: flex
+		align-items: flex-start
+		&__left
+			flex: none
+			
+			max-width: $z70 + $z70 + $z70 + $z70 + $z70
+			min-width: 260px
+		&__right
+			flex: 1
+			padding-left: $z70 + $z70
+
+	&-info
+		font-size: $z13 
+		&__title
+			color: #707e85
+			margin-bottom: $z5
+		&__text
+			color: $color
+			margin-bottom: $z10
+
+		&-list
+			&__item
+				box-shadow: 0 1px 0 #f1f4f6
+				font-size: $z13
+				padding: $z5 0
+				display: flex
+
+				&:last-child
+					box-shadow: none
+
+			&__name 
+				flex: 1
+				padding-right: $z20
+			&__info 
+				flex: none
+
+		&__product
+			padding: $z15 0
+			position: relative
+			padding-right: 7.5rem
+			box-shadow: 0 1px 0 #f1f4f6
+			&:last-child
+				box-shadow: none
+				padding-bottom: 0
+			.order-available
+				position: absolute
+				top: $z13
+				right: 0
+
+	&-button 
+		padding-top: $z10
+		display: flex
+		align-items: center
+		.available
+			margin-left: auto
+			position: absolute
+			top: $z32
+			right: $z30
+			
+
+.boxes-bonus
+	display: flex
+	padding: $z30
+	box-shadow: 0 1px 0 0 #f1f4f6
+	&__content
+		flex: 1
+		padding-right: $z40
+	&__button 
+		flex: none
+	h4.title
+		margin-bottom: $z8
+	p 
+		font-size: $z13
+		margin-bottom: 0

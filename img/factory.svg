@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 270 270">
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M138 30h100v210H138z"/>
+            <path d="M154 46h14v12h-14zM154 71h14v12h-14zM181 46h14v12h-14zM181 71h14v12h-14zM208 46h14v12h-14zM208 71h14v12h-14zM154 96h14v12h-14zM181 96h14v12h-14zM208 96h14v12h-14zM154 121h14v12h-14zM181 121h14v12h-14zM208 121h14v12h-14zM154 146h14v12h-14zM181 146h14v12h-14zM208 146h14v12h-14zM154 171h14v12h-14zM181 171h14v12h-14zM208 171h14v12h-14z"/>
+        </g>
+        <rect width="230" height="2" x="20" y="239" fill="#0CBAEE" rx="1"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M168 235v-29h40v29"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48 146l5-89h16l5 89M45 235v-19h15v19"/>
+        <rect width="2" height="26" x="187" y="210" fill="#0CBAEE" rx="1"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32 235v-85h101"/>
+        <g fill="#202528" transform="matrix(-1 0 0 1 123 160)">
+            <circle cx="4" cy="4" r="4"/>
+            <circle cx="14" cy="14" r="4"/>
+            <circle cx="4" cy="14" r="4"/>
+            <circle cx="24" cy="14" r="4"/>
+            <circle cx="24" cy="4" r="4"/>
+            <circle cx="4" cy="24" r="4"/>
+            <circle cx="4" cy="34" r="4"/>
+            <circle cx="24" cy="34" r="4"/>
+            <circle cx="4" cy="44" r="4"/>
+            <circle cx="14" cy="44" r="4"/>
+            <circle cx="34" cy="44" r="4"/>
+            <circle cx="4" cy="54" r="4"/>
+            <circle cx="14" cy="54" r="4"/>
+            <circle cx="4" cy="64" r="4"/>
+            <circle cx="14" cy="64" r="4"/>
+            <circle cx="24" cy="44" r="4"/>
+            <circle cx="44" cy="44" r="4"/>
+            <circle cx="24" cy="54" r="4"/>
+            <circle cx="34" cy="24" r="4"/>
+            <circle cx="24" cy="24" r="4"/>
+        </g>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M56 64h10"/>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M61 42V22M55 42v-5M67 42V27"/>
+    </g>
+</svg>

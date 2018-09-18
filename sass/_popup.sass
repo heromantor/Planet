@@ -1,0 +1,122 @@
+
+.popup
+	position: absolute
+	left: -9999px
+	top: -9999px
+	opacity: 0
+	visibility: hidden
+	height: 0
+	width: 0
+	overflow: hidden
+	
+
+
+.window
+	width: 29.4rem
+	max-width: 100%
+
+	position: relative
+	
+	&-wrap
+		background: #fff
+		padding: $z50
+	&-title
+		font-size: $z20
+		margin-bottom: $z12
+		font-weight: 500
+	p 
+		font-size: $z14 
+		color: #707e85
+
+	&-form 
+		margin-top: $z30
+		margin-bottom: $z20
+
+	&-icon 
+		margin: 0 auto $z28
+		height: $z50
+
+
+p.accept-message 
+	font-size: $z11
+	font-weight: 300
+	color: #b7bec1
+	position: relative
+	max-width: 67%
+	margin: 0 auto 
+	padding-left: $z20
+	&--left
+		margin-left: 0
+	.icon 
+		position: absolute
+		top: 0
+		left: 0
+		font-size: $z14
+		color: #b7bec1
+
+
+.radio-tabs
+	margin-bottom: $z20
+	display: flex
+	align-items: center
+	&__item 
+		padding-right: 30px
+		cursor: pointer
+		white-space: nowrap
+		&:last-child 
+			padding-right: 0
+
+		.label-text
+			color: #707e85
+			font-size: $z13
+			display: inline-flex
+			align-items: center
+			vertical-align: middle
+			margin-left: $z5
+			
+			.icon 
+				flex: none
+				margin-right: $z5
+				
+		input:checked + .label-text , 
+		.styler.checked + .label-text 
+			color: $color
+
+.remember-link
+	margin-left: auto
+	color: #b7bec1
+	&:hover
+		text-decoration: underline
+		
+
+
+.box-date
+	display: flex
+	align-items: center
+	margin-bottom: $z30
+	&__datepicker
+		position: relative
+		flex: 1
+		
+	&__time, &__text
+		flex: none
+	&__time
+		width: $z60 + $z5
+		.styler
+			width: 100%
+	&__text
+		font-size: $z13
+		color: #707e85
+		padding: 0 $z6
+		
+.ui-datepicker-trigger
+	position: absolute
+	top: 50%
+	right: $z15
+	transform: translate(0,-50%)
+	background-color: transparent
+	border: none
+	padding: 0
+	img
+		height: $z18
+		width: $z18

@@ -1,0 +1,645 @@
+html 
+	font-size: 16px
+
+body 	
+	color: $color
+	font: $font-weight 1rem/1.4 $font-family, Arial, sans-serif
+	background: #f1f4f6
+	min-height: 100%
+	overflow-x: hidden
+	padding-top: $z40 + $z50 + $z6
+	&.page-inner
+		padding-top: $z40  + $z50 + $z50 + $z6
+
+.main-wrapper
+	padding: 0
+	min-width: 320px
+	position: relative 
+	overflow: hidden
+	opacity: 1
+	min-height: 100% 
+
+.wrapper
+	width: 100%
+	min-width: 320px
+	max-width: $wrapper
+	padding: 0 $z34
+	margin: 0 auto
+	position: relative
+
+h1	
+	margin: $z15 0 $z15 0
+	padding: 0
+	
+h2
+	margin: $z15 0 $z15 0
+	pading: 0
+
+h5 
+	font-size: $z16
+	font-weight: 400
+	margin: 0 0 $z10
+
+.h6
+	font-weight: 400
+	margin-bottom: $z20
+	font-size: $z13
+
+h4.title
+	font-weight: 400
+	font-size: $z20
+	margin-bottom: $z30
+	.links
+		margin-left: $z30
+
+	.title__text
+		margin-right: $z10
+	.title__link
+		margin-right: $z10
+
+.title__text
+	font-size: $z13
+	color: #707e85
+
+.title__link
+	color: $color-info
+	font-size: $z13
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+.title-inline
+	margin-left: $z30
+	display: inline-block
+	
+		
+
+.sec-title
+	text-transform: uppercase
+	color: #707e85
+	font-size: $z13
+	margin-bottom: $z20
+
+.title-line
+	font-weight: 400
+	font-size: $z20
+
+	span
+		display: inline-block
+		&:after
+			content: ''
+			display: block
+			height: $z2
+			border-radius: $z2
+			background-color: #0cbaee
+			margin: $z12 0 $z30
+		
+	
+p 
+	margin: 0 0 $z15
+	color: #707e85
+	a 
+		color: $color-info
+
+ul,ol,p,h1,h2,h3,h4,h5,h6, address, blockquote, q, dl, table
+	a 
+		color: $color-info
+		&:hover 
+			text-decoration: underline
+
+
+img
+	display: block
+	max-width: 100%
+
+.dl 
+	font-size: $z13
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: $z20
+	dt, dd
+		width: 50%
+
+.hr
+	border-bottom: 1px solid #f1f4f6
+
+.mx300 
+	max-width: 300px
+
+.hidden
+	display: none
+
+.mt40 
+	margin-top: $z40
+
+.mt10 
+	margin-top: $z10
+
+.mt30 
+	margin-top: $z30
+
+.mt10 
+	margin-top: $z10
+
+.mb5 
+	margin-bottom: $z5
+
+/* text position */
+
+.text-left
+	text-align: left !important
+
+.text-center
+	text-align: center !important
+
+.text-right
+	text-align: right !important
+
+.text-base
+	color: $color !important
+
+.text-info 
+	color: $color-info !important
+
+.text-default
+	color: #707e85 !important
+
+.flex
+	display: flex
+	align-items: center
+
+.fr 
+	float: right
+
+.pr
+	position: relative
+
+.sm 
+	font-size: $z13
+
+.xs 
+	font-size: $z11
+
+.links
+	color: #707e85
+	font-size: $z13
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+		
+
+.nowrap
+	white-space: nowrap
+
+.word-break
+	word-break: break-all
+
+/* loader */
+.loaded .main-wrapper
+	visibility: hidden
+	opacity: 0
+	transition: opacity 0.3s
+
+.icon-load
+	background: #fff 
+	position: fixed
+	z-index: 99999
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	display: none
+	
+.loaded .icon-load
+	display: block
+
+.loaded .icon-load:before
+	display: block
+	position: absolute
+	content: ""
+	left: -25%
+	width: 25%  
+	height: 3px
+	top: 0
+	background-color: #425cbb
+	animation: loading 5s linear infinite
+
+@keyframes loading 
+	from 
+		left: -25%
+
+	to 
+		left: 125%
+ 
+
+/* Tooltip */
+
+*[data-tooltip]
+	position: relative
+	&:before
+		content: attr(data-tooltip)
+		display: block
+		position: absolute
+		bottom: 100%
+		left: 50%
+		min-width: $z70 + $z70 + $z10
+		max-width: $z70 + $z70 + $z70
+		transform: translate(-50%, 0) scale(0)
+		margin-bottom: $z10
+		background: #202528 !important
+		border-radius: 3px
+		padding: $z4 $z10
+		color: #fff !important
+		z-index: 4
+		text-align: center
+		font-size: $z11
+		line-height: 1.4
+		pointer-envets: none
+		opacity: 0
+		transition: opacity 0.2s
+
+	
+	&:after
+		content: ''
+		display: block
+		+arrrem($z6, $z4, #202528, b)
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0), scale(0)
+		bottom: 100%
+		margin-bottom: $z6
+		opacity: 0
+
+
+	&:not(.active):hover
+		&:before, &:after
+			transform: translate(-50%, 0) scale(1)
+			opacity: 1
+
+			
+
+/* Tabs */
+
+.hide
+	position: absolute
+	left: 0 
+	top: 0
+	height: 0 
+	width: 0
+	overflow: hidden
+	z-index: -1
+	opacity: 0
+	visibility: hidden
+
+.tab-cont 
+	opacity: 1
+	transition: opacity 0.4s
+	visibility: visible
+	&.hide
+		opacity: 0
+
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	height: 0
+	z-index: 9
+	transition: opacity 0.4s
+	background: rgba(0,0,0, 0.5)
+	&.open
+		height: 100%
+
+.header-top-line
+	z-index: 10
+	position: fixed
+	top: $z40 + $z50 + $z6
+	left: 0
+	right: 0
+	.category
+		display: none
+		&--open 
+			display: block
+			
+.top-line
+	position: relative
+	display: flex
+	z-index: 10
+	&-position
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+	.category-toggle
+		width: calc(25% + 2px)
+		margin-left: 0
+		margin-right: 0		
+
+.breadcrumbs
+	flex: 1
+	background: $color-info
+	color: #fff
+	display: flex
+	align-items: center
+	padding: 0.5rem $z35
+	overflow: hidden
+	
+	&-list 
+		list-style: none
+		display: flex
+		align-items: center
+		width: 100%
+		overflow: hidden
+		
+		&__item 
+			padding-left: $z28 + $z28
+			position: relative
+
+			overflow: hidden
+			&:last-child
+				margin-right: 0
+				
+			&.f-none
+				flex: none
+			&:first-child
+				padding-left: 0
+				flex: none
+				
+			&:not(:first-child):after
+				content: ''
+				display: block
+				position: absolute
+				
+				left: $z25
+				top: 50%
+				margin-top: -2px
+				+arrrem($z3, $z6, #fff, r)
+				
+
+		&__link, &__title
+			color: #fff
+			font-size: $z13
+			font-weight: 300
+			display: block
+			+text-overflow
+
+		&__link
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+.box-pagination .pagination
+	border-top: 1px solid #f1f4f6
+.pagination
+	padding: $z10 $z30
+	height: $z70
+	display: flex
+	align-items: center
+	
+	&-arrow
+		height: $z70
+		align-items: center
+		padding: $z10 $z30
+		display: flex
+		justify-content: space-between
+		.prev, .next
+			color: #000
+			font-size: $z15
+			display: flex
+			align-items: center
+			&:hover
+				color: $color-info
+				.icon 
+					color: $color-info
+			.icon 
+				width: $z16
+				height: $z16
+				color: #000
+
+		.prev .icon 
+			margin-right: $z9
+		.next .icon 
+			margin-left: $z9
+
+
+	&-list
+		list-style: none
+		display: flex
+		
+		&__item
+			border: 1px solid #e2e5e7
+			border-left: none
+			&:first-child
+				border-left: 1px solid #e2e5e7
+			&:not(:last-child)
+				border-right: 1px solid #e2e5e7
+			&.active 
+				border-color: #707e85
+				.pagination-list__link
+					background: #707e85
+					color: #fff
+			&.next, &.prev
+				.icon
+					width: $z24
+					height: $z24
+
+		&__link
+			display: flex
+			align-items: center
+			justify-content: center
+			width: $z40
+			height: $z36
+
+			color: #707E85
+			&:hover 
+				background: #E2E5E7
+				text-decoration: none
+				
+.rotate-right
+	transform: rotate(180deg)
+
+.box-tags
+	padding: $z28 $z30
+	box-shadow: 0 -1px 0 0 #f1f4f6
+
+.tags-link
+	display: inline-block
+	vertical-align: middle
+	margin-right: $z6
+	color: #707e85
+	font-size: $z13
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+		color: $color
+
+.nicescroll-cursors
+	cursor: pointer
+
+
+.nicescroll-rails
+	height: 12px !important
+
+
+.lines
+	list-style: none
+	li
+		margin-bottom: $z12
+		position: relative
+		padding-left: $z28
+		&:last-child
+			margin-bottom: 0
+		.styler, .radio, .checkbox
+			position: absolute !important
+			top: $z3 !important
+			left: 0
+		.label-text
+			color: $color
+	&--c-icon
+		li 
+			padding-right: $z60 + $z20
+			min-height: $z36
+			+min-screen(1025px)
+				&:hover
+					.b-btn
+						background: #ff6e6e
+						border-color: #ff6e6e
+						.icon 
+							color: #fff
+		.b-btn
+			position: absolute
+			top: 0
+			right: 0
+			.icon 
+				color: #ff6e6e
+
+
+
+.mb30 
+	margin-bottom: $z30
+
+/* Steps */
+.steps
+	background: #fff
+	border: 1px solid #e2e5e7
+	display: flex
+	margin-bottom: $z30
+	&__item
+		display: flex
+		align-items: center
+		height: $z60
+		flex: 1
+		padding: $z10 $z10 $z10 $z40
+		position: relative
+		&:not(:last-child):before
+			content: ''
+			display: block
+			position: absolute
+			left: 100%
+			top: 0
+			z-index: 1
+			+arrrem($z20, $z60, #e2e5e7, r)
+		&:not(:last-child):after
+			content: ''
+			display: block
+			position: absolute
+			left: 100%
+			top: 0
+			margin-left: -1px
+			z-index: 1
+			+arrrem($z20, $z60, #fff, r)
+		&.active, &.selected 
+			background: #f1f4f6
+			&:not(:last-child):after
+				+arrrem($z20, $z60, #f1f4f6, r)
+			.steps__text
+				color: $color
+		&:first-child
+			padding-left: $z20
+
+		.icon 
+			color: #8fd14f
+			margin-right: $z10
+			font-size: $z16
+			flex: none
+
+	&__text
+		color: #707e85
+		font-size: $z13
+
+
+.table-wrap
+	font-size: $z13
+	&-head
+		display: flex
+		border-bottom: 1px solid #b7bec1
+	&__tr 
+		display: flex
+		border-bottom: 1px solid #f1f4f6
+		&:last-child
+			border-bottom: none
+
+	&__th, &__td
+		padding: $z20
+		flex: none
+		&--all 
+			display: flex
+			padding: 0 !important
+			flex: 1
+			.table-wrap__td, 
+			.table-wrap__th
+				&:last-child
+					padding-right: 0
+				&:first-child
+					padding-left: $z20
+		
+			
+		
+		
+
+	&__th 
+		color: #707e85
+		&:first-child
+			padding-left: 0
+	&__td 
+		
+		&:first-child
+			padding-left: 0
+		a 
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+				
+	.col31
+		width: 18%
+	.col32
+		width: 23%
+	.col33 
+		width: 35%
+	.col34
+		width: 42%
+
+.b-train
+	display: flex
+	align-items: center
+	white-space: nowrap
+	max-width: $z70 + $z50
+	justify-content: flex-end
+	
+	&__icon
+		font-size: 0
+		margin-left: $z20
+		&.down .icon
+			width: $z16
+			height: $z16
+			color: #8fd14f
+			transform: rotate(90deg)
+		&.up .icon 
+			width: $z16
+			height: $z16
+			color: #f57523
+			transform: rotate(-90deg)
+
+
+.boxes-fill-m
+	padding: $z40 

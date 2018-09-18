@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="270"  viewBox="0 0 270 270">
+    <g fill="none" fill-rule="evenodd" transform="translate(32 20)">
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36 190H20c-11.046 0-20-8.954-20-20V80c0-11.046 8.954-20 20-20h166c11.046 0 20 8.954 20 20v90c0 11.046-8.954 20-20 20h-16"/>
+        <circle cx="181" cy="85" r="5" stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43 55V0h120v55M43 175v55h120v-55M59 190h20M89 190h40M59 202h44M113 202h34M59 214h14M83 214h34"/>
+        <g fill="#202528" transform="translate(57 16)">
+            <circle cx="4" cy="4" r="4"/>
+            <circle cx="14" cy="14" r="4"/>
+            <circle cx="4" cy="14" r="4"/>
+            <circle cx="24" cy="14" r="4"/>
+            <circle cx="4" cy="24" r="4"/>
+            <circle cx="78" cy="4" r="4"/>
+            <circle cx="14" cy="24" r="4"/>
+            <circle cx="88" cy="4" r="4"/>
+            <circle cx="34" cy="24" r="4"/>
+            <circle cx="24" cy="24" r="4"/>
+        </g>
+        <g fill="#202528" transform="translate(57 111)">
+            <circle cx="4" cy="4" r="4"/>
+            <circle cx="14" cy="14" r="4"/>
+            <circle cx="4" cy="14" r="4"/>
+            <circle cx="24" cy="14" r="4"/>
+            <circle cx="24" cy="4" r="4"/>
+            <circle cx="4" cy="24" r="4"/>
+            <circle cx="78" cy="4" r="4"/>
+            <circle cx="68" cy="4" r="4"/>
+            <circle cx="88" cy="4" r="4"/>
+            <circle cx="88" cy="24" r="4"/>
+            <circle cx="34" cy="24" r="4"/>
+            <circle cx="24" cy="24" r="4"/>
+        </g>
+        <path stroke="#0CBAEE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 169h146.003M30 85h23"/>
+    </g>
+</svg>
