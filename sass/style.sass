@@ -296,7 +296,7 @@ button.btn
 			position: absolute !important
 			top: $z3 !important
 			left: 0
-		.label-text
+		input:checked ~ .label-text
 			color: $color
 
 		&-cont 
@@ -1616,6 +1616,9 @@ label
 		
 	.table-address .col12
 		width: $z70 + $z40
+
+	.table-address__th.col11
+		padding-left: 0
 
 	.reauested
 		padding: $z70 $z30

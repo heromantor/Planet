@@ -372,7 +372,7 @@ p.accept-message .icon { position: absolute; top: 0; left: 0; font-size: 0.875re
 
 .remember-link { margin-left: auto; color: #b7bec1; }
 
-.remember-link:hover { text-decoration: underline; }
+.remember-link:hover { text-decoration: underline; color: #202528; }
 
 .box-date { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-bottom: 1.875rem; }
 
@@ -482,6 +482,8 @@ img { display: block; max-width: 100%; }
 .fr { float: right; }
 
 .pr { position: relative; }
+
+.md { font-size: 0.9375rem; }
 
 .sm { font-size: 0.8125rem; }
 
@@ -807,7 +809,7 @@ input.btn--block, button.btn--block { display: block; width: 100%; }
 
 .form-checkbox .styler, .form-checkbox .checkbox, .form-checkbox .radio, .form-radio .styler, .form-radio .checkbox, .form-radio .radio { position: absolute !important; top: 0.1875rem !important; left: 0; }
 
-.form-checkbox .label-text, .form-radio .label-text { color: #202528; }
+.form-checkbox input:checked ~ .label-text, .form-radio input:checked ~ .label-text { color: #202528; }
 
 .form-checkbox-cont, .form-radio-cont { padding-left: 1.75rem; padding-top: 0.3125rem; }
 
@@ -1913,6 +1915,8 @@ header { min-width: 320px; text-align: left; top: 0; left: 0; right: 0; position
 
 .table-address__th { color: #707e85; font-size: 0.8125rem; }
 
+.table-address__th.col11 { padding-left: 6.25rem; }
+
 .table-address__th:first-child { margin-left: -1.75rem; margin-right: 1.75rem; padding-right: 0 !important; }
 
 .table-address__td { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -2391,6 +2395,7 @@ header { min-width: 320px; text-align: left; top: 0; left: 0; right: 0; position
   .wt-wrap__left { padding-right: 0; width: auto; margin-bottom: 2.5rem; }
   .table-product__img { display: none; }
   .table-address .col12 { width: 6.875rem; }
+  .table-address__th.col11 { padding-left: 0; }
   .reauested { padding: 4.375rem 1.875rem; }
   .reauested-wrap { max-width: none; }
   .row { display: block; }
