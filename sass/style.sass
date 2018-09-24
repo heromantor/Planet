@@ -49,7 +49,7 @@
 
 /* 3.1. Icons
      ====================== */
-.ic 
+.ic
 	position: relative
 	display: inline-block
 	vertical-align: middle
@@ -95,10 +95,10 @@
 		background-color: darken($color-info, 10%)
 		text-decoration: none
 		color: #fff
-	&--block 
+	&--block
 		display: flex
 		width: 100%
-	&--lg 
+	&--lg
 		height: $z50
 		padding-left: $z50
 		padding-right: $z50
@@ -118,11 +118,11 @@
 		text-decoration: underline
 		&:hover
 			text-decoration: none
-		&--info 
+		&--info
 			color: $color-info
-		&--lg 
+		&--lg
 			height: $z50
-			
+
 
 
 .b-btn
@@ -144,7 +144,7 @@
 		background: $color-info
 		border-color: $color-info
 		color: #fff
-		.icon 
+		.icon
 			color: #fff
 	.icon
 		width: $z20
@@ -163,7 +163,7 @@
 	&--basket
 		.icon
 			color: $color-info
-		&:hover 
+		&:hover
 			background: $color-info
 			border-color: $color-info
 			color: #fff
@@ -178,36 +178,38 @@
 			background-color: #ff6e6e
 			border-color: #ff6e6e
 			color: #fff
-			.icon 
+			.icon
 				color: #fff
 
 	&--danger
 		background-color: #ff6e6e
 		border-color: #ff6e6e
 		color: #fff
-		.icon 
+		.icon
 			color: #fff
 
 	&--info
 		background: $color-info
 		border-color: $color-info
 		color: #fff
-		.icon 
+		.icon
 			color: #fff
 
 	&--icon
 		width: $z36 !important
 		padding-left: $z5 !important
-		padding-right: $z5 !important	  
+		padding-right: $z5 !important
 		.icon
 			margin-right: 0 !important
 
-	&--lg 
+	&--lg
 		height: $z40 + $z6
 		padding-left: $z40
 		padding-right: $z40
 		font-size: $z15
-
+	&.disabled
+		background: #b7bec1
+		cursor: not-allowed
 .btn-yandex
 	background: #ffcc00
 	display: inline-flex
@@ -222,14 +224,16 @@
 		display: flex
 
 input.btn,
-button.btn 
+button.btn
 	display: inline-block
-	&--block 
+	&--block
 		display: block
 		width: 100%
-	
+	&:disabled
+		background: #b7bec1
+		cursor: not-allowed
 
-.btn-group 
+.btn-group
 	a.btn, .btn, .btn-text
 		margin-right: $z25
 		&:last-child
@@ -238,8 +242,8 @@ button.btn
 /* 3.3. forms
      ====================== */
 
-.form 
-	&-wrap 
+.form
+	&-wrap
 		display: flex
 		margin-bottom: $z20
 		&.center
@@ -262,18 +266,19 @@ button.btn
 	&-field
 		margin-bottom: $z20
 
-		&__link 
+		&__link
 			padding-top: 2.1rem
 			font-size: $z15
 			padding-left: $z25
-			a 
+			a
 				color: #707e85
 				&:hover
-					color: $color-info 
+					color: $color-info
 					text-decoration: underline
 				&:focus
 					color: $color
-					
+		&--cod
+			width: $z70 + $z70 + $z15
 	&-label
 		color: #707e85
 		font-size: $z13
@@ -299,10 +304,10 @@ button.btn
 		input:checked ~ .label-text
 			color: $color
 
-		&-cont 
+		&-cont
 			padding-left: $z28
 			padding-top: $z5
-	&-input 
+	&-input
 		display: block
 		width: 100%
 		height: $z40 + $z6
@@ -323,9 +328,9 @@ button.btn
 		&.error
 			background-color: rgba(208, 2, 27, 0.1)
 			border-color: #d0021b
-		&--grey 
+		&--grey
 			background-color: #F6F6F6
-			&:focus 
+			&:focus
 				background-color: #fff
 		+placeholder
 			color: #b7bec1
@@ -345,13 +350,13 @@ input[type="radio"]
 
 		& ~ .label-text
 			color: $color
-.checkbox, 
+.checkbox,
 .radio
 	top: -1px
 	display: inline-block
 	position: relative
 	overflow: hidden
-	
+
 	vertical-align: middle
 	width: $z16
 	height: $z16
@@ -373,13 +378,13 @@ input[type="search"]
 	width: 0
 	height: 0
 
-textarea.form-input 
+textarea.form-input
 	height: auto
 	min-height: $z50 + $z50 + $z38
 	padding-top: $z15
 	resize: none
-	
-label 
+
+label
 	display: block
 	font-weight: 400
 	margin-bottom: 2px
@@ -388,13 +393,13 @@ label
 		font-size: $z13
 		padding-left: $z15
 		padding-top: $z4
-	&.valid 
+	&.valid
 		color: #8fd14f
 		font-size: $z13
 		padding-left: $z15
 		padding-top: $z4
-		
-	
+
+
 
 .box-checkbox
 	display: inline-block
@@ -405,12 +410,12 @@ label
 	margin-bottom: $z3
 	.jq-checkbox, .checkbox
 		margin-right: 2px
-	
+
 
 	.styler.checked, input:checked
 		& ~ .label-text
 			color: $color
-	.styler.disabled, input:disabled 
+	.styler.disabled, input:disabled
 		& ~ .label-text
 			color: #b7bec1
 
@@ -420,17 +425,17 @@ label
 	color: #707e85
 	font-size: $z13
 	line-height: 1.23
-	a 
+	a
 		color: $color-info
 		text-decoration: underline
-		
+
 
 .group-input
 	display: flex
 	margin-left: -$z10
 	margin-right: -$z10
 	margin-bottom: $z28
-	input 
+	input
 		height: $z36
 		border: 1px solid #e2e5e7
 		background-color: #fff
@@ -459,31 +464,31 @@ label
 		margin: 0
 		display: block
 		pointer-events: none
-		
+
 .slider-range
 	margin-bottom: $z13
 
 .bl-tel-mask
 	position: relative
-	
+
 	&:after
 		content: '+7'
 		display: block
 		font-size: $z15
-		
+
 		color: $color
 		position: absolute
 		top: $z14
 		left: $z15
 
-	.form-input 
+	.form-input
 		padding-left: $z35
-		
-.tel-mask 
+
+.tel-mask
 	font-family: monospace!important
 
 
-.req 
+.req
 	display: flex
 	align-items: flex-start
 	&-input
@@ -507,10 +512,10 @@ label
 		text-decoration: underline
 		&:hover
 			text-decoration: none
-			
-		
 
-	
+
+
+
 /* 4. HEADER
 /* ================================================ */
 
@@ -533,12 +538,12 @@ label
 			margin-left: 0 !important
 			margin-right: 0 !important
 
-		.content-wrap 
+		.content-wrap
 			padding: $z30
 			width: auto
-			
-			
-.title-wrap 
+
+
+.title-wrap
 	display: flex
 	align-items: center
 	padding: $z20
@@ -551,14 +556,14 @@ label
 
 
 
-.content 
+.content
 	background: #fff
 	flex: 1
-	&.pb0 
+	&.pb0
 		padding-bottom: 0
-	
-	
-	&-wrap 
+
+
+	&-wrap
 		width: 74.2%
 		margin: 0 auto
 		padding: $z70 $z30 $z30
@@ -566,26 +571,26 @@ label
 	.m-content
 		margin-left: -$z30
 		margin-right: -$z30
-		.sort 
+		.sort
 			margin: 0
 
-	&-login 
+	&-login
 		padding: $z25 0
 		border-bottom: 1px solid #f1f4f6
-		p 
+		p
 			font-size: $z13
 			color: $color
 			margin-bottom: 0
-			a 
+			a
 				text-decoration: underline
 				&:hover
 					text-decoration: none
 
 .c-container
 	padding: $z60 ($z60 + $z60)
-		
 
-#map 
+
+#map
 	height: 6.25rem * 6
 
 
@@ -601,7 +606,7 @@ label
 	&-wrap
 		display: flex
 		align-items: flex-start
-		
+
 		&__left
 			width: 43%
 			margin-right: 10%
@@ -613,7 +618,7 @@ label
 			p
 				line-height: 1.75
 				margin-bottom: $z30
-				&:last-child 
+				&:last-child
 					margin-bottom: 0
 		&__title
 			font-weight: 500
@@ -621,7 +626,7 @@ label
 			margin: 0 0 $z32
 
 
-.address-wrap 
+.address-wrap
 	display: flex
 	flex-wrap: wrap
 	margin: 0 (-$z15)
@@ -652,11 +657,11 @@ label
 		padding-left: $z24
 		line-height: 1.63
 
-.ymaps-2-1-68-image 
+.ymaps-2-1-68-image
 	width: $z40 + $z40 + $z40 + $z20  + $z2 !important
 	height: $z40  !important
 	background-size: cover !important
-	background-repeat: no-repeat !important	 
+	background-repeat: no-repeat !important
 
 /* 3.2. Category
      ====================== */
@@ -708,12 +713,12 @@ label
 
 /* 5. SIDEBAR
 /* ================================================ */
-.sidebar 
+.sidebar
 	flex: none
 	width: 24%
 	margin-left: $z20
 	min-width: 240px
-	&-bl 
+	&-bl
 		background: #fff
 
 	&__title
@@ -722,7 +727,7 @@ label
 		text-transform: uppercase
 		font-weight: 300
 		padding: $z20
-		.b-btn 
+		.b-btn
 			float: right
 			margin-top: -$z10
 
@@ -731,8 +736,8 @@ label
 			margin-top: -$z10
 
 	&-list
-		padding: $z5 $z20 
-		&__item 
+		padding: $z5 $z20
+		&__item
 			border-bottom: 1px solid #f1f4f6
 			height: $z50
 			display: flex
@@ -740,7 +745,7 @@ label
 			font-size: $z13
 			&:last-child
 				border-bottom: none
-			& > span 
+			& > span
 				display: block
 				&:first-child
 					flex: 1
@@ -749,10 +754,10 @@ label
 					text-align: right
 					flex: none
 
-			a 
+			a
 				display: flex
 				align-items: center
-				.icon 
+				.icon
 					width: $z18
 					height: $z20
 					flex: none
@@ -760,21 +765,21 @@ label
 				&:hover
 					text-decoration: underline
 
-				
+
 	&-content
 		padding: $z20
-	&-login 
+	&-login
 		padding: $z20
 		border-bottom: 1px solid #f1f4f6
 		&.non-br
 			border: none
-			p 
+			p
 				margin-bottom: $z25
-		p 
+		p
 			font-size: $z13
 			color: $color
 			margin-bottom: 0
-			a 
+			a
 				text-decoration: underline
 				&:hover
 					text-decoration: none
@@ -798,20 +803,20 @@ label
 
 .sidebar--iphone-hidden.hide-sidebar
 	display: none !important
-					
+
 
 .check-list
 	list-style: none
 	&__item
 
-		label 
+		label
 			display: flex
 			align-items: flex-start
 			padding: $z16 $z20
 			margin-bottom: 0
 			cursor: pointer
 			transition: all 0.4s
-			
+
 			position: relative
 			&:before
 				content: ''
@@ -836,7 +841,7 @@ label
 				margin-right: $z12
 				margin-bottom: 0
 				top: 0
-				&.checked, &:checked 
+				&.checked, &:checked
 					& ~ .label-text
 						color: #202528
 					& ~ .badge
@@ -846,18 +851,18 @@ label
 				flex: 1
 				font-size: $z13
 
-			.badge 
+			.badge
 				top: 50%
 				right: $z20
 				transform: translate(0,-50%)
 				background: #b7bec1
-		
+
 
 		&--all
-			margin-top: $z15 
+			margin-top: $z15
 			label
 				.label-text
-					font-size: $z15 
+					font-size: $z15
 
 				&:after
 					display: none
@@ -873,13 +878,13 @@ label
 				.filter-wrap__settings
 					opacity: 1
 		&__head
-			
-			padding: $z13 $z15 $z13 $z56 
+
+			padding: $z13 $z15 $z13 $z56
 			cursor: pointer
 			.filter-wrap__tag
 				display: block
-				
-			&.open 
+
+			&.open
 				.filter-wrap__title
 					color: $color
 				.icon-right
@@ -887,7 +892,7 @@ label
 					transform: rotate(90deg)
 				.filter-wrap__tag
 					display: none
-					
+
 			.icon-right
 				position: absolute
 				top: $z8
@@ -901,7 +906,7 @@ label
 			padding-right: $z60
 
 			text-transform: uppercase
-		
+
 		&__settings
 			position: absolute
 			top: $z11
@@ -912,7 +917,7 @@ label
 		&__tag
 			font-size: 0
 			margin-left: -$z30
-			span 
+			span
 				display: inline-block
 				vertical-align: top
 				color: #fff
@@ -932,7 +937,7 @@ label
 	cursor: pointer
 	margin-right: $z10
 	position: relative
-	
+
 	&:last-child
 		margin-right: 0
 	.icon
@@ -952,15 +957,15 @@ label
 .footer
 	min-width: 320px
 	background: #2e3b44
-	
+
 	color: #b7bec1
 
-	&-wrap 
+	&-wrap
 		position: relative
 		padding: $z60 0
 		display: flex
 		flex-wrap: wrap
-		&__item 
+		&__item
 			padding-bottom: $z20
 			padding-top: $z20
 			width: 25%
@@ -979,9 +984,9 @@ label
 			font-weight: 300
 			margin-top: $z10
 			display: block
-		img 
+		img
 			width: $z50 + $z50 + $z25
-			
+
 	&-list
 		list-style: none
 
@@ -996,8 +1001,8 @@ label
 			&:hover
 				text-decoration: underline
 				color: #0cbaee
-	
-	.up	
+
+	.up
 		position: absolute
 		right: 0
 		bottom: 0
@@ -1009,7 +1014,7 @@ label
 			color: #b7bec1
 
 		&:hover .icon
-			color: #0CBAEE 
+			color: #0CBAEE
 
 
 .copyright
@@ -1026,21 +1031,21 @@ label
 	align-items: center
 	margin: 0 (-$z8)
 
-	a 
+	a
 		display: block
 		padding: 0 $z8
 
-.visa 
+.visa
 	img
 		width: $z40 + $z6
 		height: $z16
 
-.master 
+.master
 	img
 		width: $z39
 		height: $z24
 
-.mir 
+.mir
 	img
 		width: $z50 + $z3
 		height: $z16
@@ -1052,34 +1057,34 @@ label
 
 @media screen and (min-width: 1921px)
 
-	html 
+	html
 		font-size: 20px
-	
+
 @media screen and (min-width: 2600px)
 
-	html 
+	html
 		font-size: 27px
-	
+
 @media screen and (min-width: 3200px)
 
-	html 
+	html
 		font-size: 34px
 
 @media screen and (min-width: 4000px)
 
-	html 
+	html
 		font-size: 38px
 
 @media screen and (min-width: 1600px)
-	.wrapper, 
+	.wrapper,
 		max-width: 84%
 		width: auto
 
 	.page-error
 		max-width: 75%
 		width: auto
-		
-		
+
+
 
 +screen(1600px, 1700px)
 
@@ -1098,15 +1103,15 @@ label
 		.product__button
 			margin-left: auto
 
-	
-			
+
+
 +max-screen(1599px)
 	.wrapper
 		max-width: none
 
 
 	/* Header ================= */
-	.header-top, 
+	.header-top,
 	.header-bottom
 		.wrapper
 			padding-left: 0
@@ -1115,20 +1120,20 @@ label
 	/* Content ================= */
 	.box-category,
 	.category-card,
-	.category-toggle, 
-	.top-line, 
-	.content, 
+	.category-toggle,
+	.top-line,
+	.content,
 	.main-wrap,
 	.wrapper >  .title-wrap
 		margin-left: -$z34
 		margin-right: -$z34
 
-	.content-wrap 
+	.content-wrap
 		max-width: 940px
 		width: auto
 
 	.main-wrap
-		.content-wrap 
+		.content-wrap
 			max-width: none
 
 	.top-line-position
@@ -1137,28 +1142,28 @@ label
 
 	/* Contacts ================= */
 	.map-container
-		padding-top: $z50	
+		padding-top: $z50
 
 	.contacts
 		max-width: 1170px
 
 	/* Payment ================= */
 	.table-address
-		&-list li 
+		&-list li
 			.label-text
 				font-size: $z13
 			.styler
 				top: 0 !important
 		.col1, .col2, .col3
 			width: 33.33%
-	
+
 	/* Sravnenie ================= */
 	.comparison-column.slick-slider
 		margin-right: $z30
 
 	/* Fancybox ================= */
-	
-	#fancybox-thumbs ul li a 
+
+	#fancybox-thumbs ul li a
 		width: 80px !important
 		height: 60px !important
 
@@ -1180,8 +1185,8 @@ label
 		.product__button
 			margin-left: auto
 
-	
-		
+
+
 +max-screen(1200px)
 	.hidden-1200
 		display: none !important
@@ -1199,7 +1204,7 @@ label
 		width: 300px
 		&-dropdown
 			left: 300px
-			& > div 
+			& > div
 				column-count: 3
 		&-body
 			&__img
@@ -1212,16 +1217,16 @@ label
 		&__item
 			width: 33.33%
 
-	.product__price, 
+	.product__price,
 	.product__available
 		margin-right: 1.25rem
 
-	.boxes-product--grid 
+	.boxes-product--grid
 		.product
 			width: 50%
 			&__price
 
-	.boxes-product--cart 
+	.boxes-product--cart
 		.product__content
 			display: block
 		.product__title
@@ -1230,7 +1235,7 @@ label
 		.product__details
 			justify-content: flex-end
 			flex-wrap: nowrap
-				
+
 
 	/* Content ================= */
 	.top-line .category-toggle
@@ -1252,15 +1257,15 @@ label
 	/* Sidebar ================= */
 
 	.title-wrap
-		.b-btn 
+		.b-btn
 			padding-left: $z3
 			padding-right: $z3
 			width: $z36
 			&__text
 				display: none
-			.icon 
+			.icon
 				margin-right: 0
-	
+
 	/* News ================= */
 
 	.boxes__news
@@ -1276,7 +1281,7 @@ label
 	/* Sravnenie ================= */
 	.com-row
 		width: 50%
-		&--full 
+		&--full
 			width: 50%
 
 	/* Payment ================= */
@@ -1285,14 +1290,14 @@ label
 			font-size: $z13
 		.col1
 			width: 35%
-		.col2 
+		.col2
 			display: none
-		.col3 
+		.col3
 			width: 65%
 
 		.ipad-h
 			display: none
-			
+
 		&__td-ct
 			flex-direction: column
 			.col12
@@ -1308,11 +1313,18 @@ label
 			&__right
 				padding-left: $z70
 
+	/* Card ================= */
+
+	.empty-card
+		padding: $z40 $z30
+		&__head
+			padding: 0 $z30
+
 
 
 +min-screen(1025px)
 	/* News ================= */
-	.boxes__article.hide, 
+	.boxes__article.hide,
 	.boxes__news.hide
 		position: static
 		opacity: 1
@@ -1321,13 +1333,25 @@ label
 		z-index: 0
 	.boxes-tab-list
 		display: none
-		
+
+	.card-details
+		&__left
+			width: auto !important
+			.jspContainer, .jspPane
+				width: auto !important
+				height: auto !important
+				position: static !important
+
+
+			.jspVerticalBar, .jspHorizontalBar
+				display: none !important
+
 +max-screen(1024px)
 	body
 		padding-top: $z50 + $z40
 		&.page-inner
 			padding-top: $z50 + $z40 + $z50
-			
+
 
 	.hidden-ipad, *[data-tooltip]:before, *[data-tooltip]:after
 		display: none !important
@@ -1338,9 +1362,9 @@ label
 	h4.title
 		margin-bottom: $z30
 
-	.title-wrap 
+	.title-wrap
 		border-bottom: 1px solid #f1f4f6
-		padding: $z10 $z20 
+		padding: $z10 $z20
 		margin-bottom: 0
 
 	.table-wrap__th, .table-wrap__td
@@ -1361,14 +1385,14 @@ label
 			&__link, &__title
 				font-size: $z12
 
-	.steps 
+	.steps
 		&__item
 			padding-left: $z30
 			&:first-child
 				padding-left: $z15
 
 
-	
+
 	/* Header ================= */
 
 	.navbar
@@ -1377,14 +1401,14 @@ label
 		&__link
 			height: $z50
 
-	
+
 
 	/* Content ================= */
 	.box-category,
 	.category-card,
-	.category-toggle, 
-	.top-line, 
-	.content, 
+	.category-toggle,
+	.top-line,
+	.content,
 	.main-wrap,
 	.content .m-content,
 	.wrapper >  .title-wrap
@@ -1394,13 +1418,13 @@ label
 	.main-wrap .content-wrap
 		padding-top: $z30
 		padding-bottom: $z30
-		padding-left: $z20 
-		padding-right: $z20 
+		padding-left: $z20
+		padding-right: $z20
 
 	.content-wrap, .search-result, .boxes-bonus,
 	.boxes-fill-m
-		padding-left: $z20 
-		padding-right: $z20 
+		padding-left: $z20
+		padding-right: $z20
 
 	.content
 		.steps
@@ -1411,21 +1435,21 @@ label
 			border-left: none
 			border-right: none
 	/* Contacts ================= */
-	#map 
+	#map
 		height: 480px
 	.contacts
 		max-width: 77%
 
 		&-wrap
 			display: block
-			
+
 			&__left
 				width: auto
 				margin-right: 0
 				margin-bottom: $z70
 			&__right
 				width: auto
-				
+
 
 
 	/* Category ================= */
@@ -1436,15 +1460,15 @@ label
 	.category
 		padding-top: 5px
 		padding-bottom: 5px
-		&-list 
-			&__link 
+		&-list
+			&__link
 				padding: 0.432rem 1.25rem 0.432rem 1.3rem
 				height: 3rem
 		&-dropdown
-			& > div 
+			& > div
 				column-count: 2
 
-		&-body 
+		&-body
 			.swiper-slide
 				display: block
 				padding: $z20 $z70 $z25
@@ -1458,7 +1482,7 @@ label
 
 	.card-list
 		&__item
-			width: 50%	
+			width: 50%
 
 	.product
 		padding: $z20
@@ -1477,7 +1501,7 @@ label
 		&__price
 			flex: 1
 
-	.boxes-product--grid 
+	.boxes-product--grid
 		.product
 			padding: $z20
 			&__icon
@@ -1486,10 +1510,10 @@ label
 			&__available
 				text-align: left
 
-	.boxes-product--cart 
+	.boxes-product--cart
 		.product__img
 			width: $z50 + $z40
-			margin-right: $z20 
+			margin-right: $z20
 		.product__available
 			width: auto
 			margin-right: $z15
@@ -1502,13 +1526,13 @@ label
 			margin-bottom: $z15
 	.box-tags
 		display: none
-		
-	.sort__item a 
+
+	.sort__item a
 		padding-left: $z20
 		padding-right: $z20
 
 	/* Sidebar ================= */
-	.sidebar 
+	.sidebar
 		margin-left: 0
 		border: 1px solid #f1f4f6
 		&__title .b-btn
@@ -1517,9 +1541,9 @@ label
 			width: $z36
 			&__text
 				display: none
-			.icon 
+			.icon
 				margin-right: 0
-		&-login 
+		&-login
 			padding: $z20
 
 
@@ -1527,7 +1551,7 @@ label
 
 	.filter-wrap__head
 		padding-left: $z40
-		padding-right: 0 
+		padding-right: 0
 		.icon-right
 			left: $z8
 
@@ -1537,7 +1561,7 @@ label
 
 	/* Autorized ================= */
 	.bl-massg
-		padding: $z20 
+		padding: $z20
 	.order
 		padding: $z20
 		&-content
@@ -1548,7 +1572,7 @@ label
 			right: $z20
 	/* News ================= */
 	.boxes
-		display: block		
+		display: block
 		&__news, &__article
 			border: none
 			padding: 0
@@ -1589,15 +1613,15 @@ label
 		flex-wrap: wrap
 		margin-left: -$z9
 		margin-right: -$z9
-		&__item 
+		&__item
 			display: block
 			border-bottom: none
 			width: 50%
 			padding: 0 $z9
 			margin-bottom: $z30
-		&__content 
+		&__content
 			padding-left: 0
-		&__img 
+		&__img
 			margin-bottom: $z20
 			min-width: 1px
 			width: auto
@@ -1613,7 +1637,7 @@ label
 
 	.table-product__img
 		display: none
-		
+
 	.table-address .col12
 		width: $z70 + $z40
 
@@ -1622,8 +1646,8 @@ label
 
 	.reauested
 		padding: $z70 $z30
-		
-		
+
+
 		&-wrap
 			max-width: none
 
@@ -1641,32 +1665,55 @@ label
 		display: block
 		&__item
 			width: auto
-			
-		
+
+
 
 	/* Card ================= */
-	.card 
+	.card
 		&__title
 			padding: $z20
-		&-wrap 
+		&-wrap
 			padding-left: $z20
 			padding-right: $z20
-			padding-bottom: $z30	
+			padding-bottom: $z30
 	.card-slider
-		width: 49%
-
+		width: 45%
+	.card-params
+		&-list li
+			white-space: nowrap
 	.card-details
+		display: block
+		width: 55%
 		padding-left: $z20
 		&__left
 			padding-right: $z15
+			&-flex
+				display: flex
+				padding-bottom: $z15
 		&__right
 			min-width: 1px
-			width: 41%
+			padding-top: $z20
+			width: auto
+			display: flex
+			justify-content: flex-end
+			flex-wrap: wrap
+
+	.card-price
+		margin-right: $z40
+	.card-icon
+		width: 100%
+		display: flex
+		justify-content: flex-end
+		.data-link
+			margin-left: $z20
 
 	.card-count
-		display: block
+
+		padding-top: $z7
+
+		margin-bottom: $z30
 		.b-number
-			margin-right: 0
+			margin-right: $z20
 			margin-bottom: $z8
 
 		.b-btn
@@ -1674,8 +1721,10 @@ label
 			padding-left: $z9
 			padding-right: $z9
 
+	.card-descr
+		padding-right: $z30
 	.cd-slider-nav .slick-slide
-		margin-left: $z5	
+		margin-left: $z5
 		margin-right: $z5
 
 	.specs-container
@@ -1706,6 +1755,59 @@ label
 		padding-left: 0
 		padding-right: 0
 
+		/* Card ================= */
+
+	.empty-card
+		flex-wrap: wrap
+		padding-top: $z30
+		padding-bottom: $z30
+		padding-left: $z20
+		padding-right: $z20
+		&__head
+			padding-left: 0
+			padding-right: 0
+			width: 100%
+			flex: auto
+			margin-bottom: $z30
+		&__brand
+			order: 1
+			width: 34%
+			flex: none
+			.card-descr
+				margin-left: $z25
+		&__price
+			order: 1
+			width: auto
+			margin-left: auto
+
+			max-width: 450px
+			flex: none
+			display: flex
+			flex-wrap: wrap
+			.card-price
+				margin-right: $z15
+				width: 170px
+			.card-icon
+				justify-content: flex-start
+				.data-link
+					margin-left: 0
+
+			.card-button
+				.b-btn
+					padding-left: $z15
+					padding-right: $z15
+					width: auto !important
+					.icon
+						margin-right: $z10
+					&__text
+						display: block
+
+		&-foot
+			padding: $z30 $z20
+
+
+
+
 	/* Brands ================= */
 
 	.manufacturers
@@ -1722,7 +1824,7 @@ label
 		padding: 0 $z4
 		min-width: $z26
 
-	.line 
+	.line
 		height: 1px
 		margin: $z10 0 $z20
 
@@ -1737,7 +1839,7 @@ label
 
 	.comparison-wrap-content
 		max-width: 68%
-	.com-box 
+	.com-box
 		padding: $z20
 		.product__available
 			width: auto
@@ -1749,35 +1851,35 @@ label
 			text-align: right
 		.product__count
 			margin-left: auto
-			
-		.product__button 
+
+		.product__button
 			margin-left: 0
-		.product__icon 
+		.product__icon
 			width: 100%
 		.product__details
 			align-items: flex-start
 
-		&-list 
-			span 
+		&-list
+			span
 				margin: 0 (-$z20)
 				padding: 0 $z20
 
-	.com-slider 
+	.com-slider
 		.slick-dots
 			margin-top: 0
 		.slick-arrow
 			display: none
-			
-	
+
+
 	/* Error ================= */
 
 	.page-error
 		display: block
 		text-align: center
 		padding: 8rem $z50
-		&__img 
+		&__img
 			margin-bottom: $z30
-			img 
+			img
 				margin: 0 auto
 		&__content
 			padding-left: 0
@@ -1789,15 +1891,15 @@ label
 		width: 60px
 	.fancybox-type-image .fancybox-skin
 		padding: 0 60px !important
-	
+
 
 	.fancybox-next
 		right: -60px
-	.fancybox-prev 
+	.fancybox-prev
 		left: -60px
 
-	#fancybox-thumbs ul li 
-		a 
+	#fancybox-thumbs ul li
+		a
 			width: 100px !important
 			height: 80px !important
 
@@ -1809,7 +1911,18 @@ label
 			padding-right: 0
 
 	.footer .up
-		display: none		
+		display: none
+
++max-screen(900px)
+	.card-button
+		.b-btn
+			width: $z36 !important
+			padding-right: $z3
+			padding-left: $z3
+			&__text
+				display: none
+			.icon
+				margin-right: 0
 
 +min-screen(768px)
 	.navbar-mobile, .visible-iphone, .js-check-list, .sort--scroll .jspHorizontalBar
@@ -1821,36 +1934,36 @@ label
 	.sort--scroll, .sort--scroll .jspContainer, .sort--scroll .jspPane
 		width: auto !important
 
-	
+
 		right: 0
 		left: 0
 
 	.sort--scroll .jspContainer
 		height: $z50 + $z6 !important
-		
 
-		
-		
-		
+
+
+
+
 
 +max-screen(767px)
-	body 
+	body
 		padding-top: $z50
 		&.page-inner
 			padding-top: $z50 + $z32
-		&.menu-open 
+		&.menu-open
 			padding-top: $z50
 			background-color: #646f75
 			.header-bottom
 				box-shadow: none
-			.nicescroll-rails 
+			.nicescroll-rails
 				display: none !important
-				 
-		&.category-open 
+
+		&.category-open
 			background-color: #fff
 			.category-list__item.open
 				box-shadow: none
-	.wrapper > .title-wrap 
+	.wrapper > .title-wrap
 		border-bottom: none
 	.title-wrap
 		padding: $z12 $z10
@@ -1860,13 +1973,13 @@ label
 		display: block
 		margin-left: 0
 
-	h4.title 
+	h4.title
 		.links
 			margin-left: auto
 
 
-			
-		
+
+
 	.lines--c-icon li
 		padding-right: $z50
 	.wrapper
@@ -1876,9 +1989,9 @@ label
 	.hidden-iphone
 		display: none !important
 
-	
 
-	.pagination-arrow, 
+
+	.pagination-arrow,
 	.pagination
 		padding-left: $z20
 		padding-right: $z20
@@ -1907,22 +2020,22 @@ label
 			display: block
 			&:first-child
 				padding-left: 0
-	
+
 	.table-wrap .col31
 		width: 26%
 		min-width: 80px
-			
+
 	.b-train__icon
 		margin-left: $z5
 
 	.ifz12
 		font-size: $z12
 
-	.btn-group 
+	.btn-group
 		a.btn, .btn, .btn-text
 			margin-bottom: $z10
 
-	
+
 	/* Header ================= */
 	.header-top-wrap
 		padding-left: 0.9375rem
@@ -1932,11 +2045,11 @@ label
 	.header-bottom-wrap
 		padding-left: 0.9375rem
 		position: relative
-	
+
 	.logo
 		width: 103px
 		margin-right: 0.625rem
-		img 
+		img
 			width: 6.2rem
 
 	.navbar-toggle
@@ -1947,9 +2060,9 @@ label
 		font-size: 1.1rem
 		&.open
 			background: #646f75
-	
-		
-	.nav-top 
+
+
+	.nav-top
 		&__item
 			margin-right: 0
 			height: 2rem
@@ -1965,7 +2078,7 @@ label
 					background: #0cbaee
 					text-decoration: none
 
-	.navbar__item 
+	.navbar__item
 		border: none
 	.navbar__link
 		height: 3.125rem
@@ -1979,7 +2092,7 @@ label
 		z-index: 11
 
 		overflow-y: auto
-		
+
 		&-list
 			list-style: none
 			&__search
@@ -1992,7 +2105,7 @@ label
 					padding-left: $z30
 					font-size: 0.9375rem
 					font-weight: 300
-					&:focus 
+					&:focus
 						padding-left: $z10
 						background: #fff
 						color: $color
@@ -2025,12 +2138,12 @@ label
 					top: 50%
 					transform: translate(0, -50%)
 					right: 0.9375rem
-				&.c-icon 
+				&.c-icon
 					.navbar-mobile-list__link
 						padding-left: ($z40 + $z5)
-				
+
 			&__link
-				
+
 				font-size: 0.9375rem
 				color: #fff
 				font-weight: 300
@@ -2038,8 +2151,8 @@ label
 				display: block
 				&:hover
 					text-decoration: none
-					
-				.icon 
+
+				.icon
 					position: absolute
 					top: 50%
 					left: .8375rem
@@ -2047,15 +2160,15 @@ label
 					transform: translate(0, -50%)
 					width: $z20
 					height: $z20
-					&-show-menu 
+					&-show-menu
 						height: $z16
-						
+
 						width: $z22
 
 
 
 	/* Category ================= */
-	
+
 	.header-top-line
 		top: $z50
 	.top-line
@@ -2072,11 +2185,11 @@ label
 			border: solid 2px #0cbaee
 			&.open
 				background: #2e3b44
-		&-body 
+		&-body
 			display: none
 		&-card
 			display: none
-			
+
 		&-dropdown
 			padding: 1rem 1rem
 
@@ -2085,10 +2198,10 @@ label
 			.category-list
 				margin: 0
 				// display: none
-				 
+
 				&__item:not(.open)
 					display: none
-				&__icon 
+				&__icon
 					display: none
 				&__link:before
 					content: ''
@@ -2096,19 +2209,19 @@ label
 					width: $z17
 					height: $z12
 					display: inline-block
-						
+
 		&-list
 			margin-top: 0
-			margin-bottom: 0		
+			margin-bottom: 0
 			&__item
 				&:after
 					display: none
-					
-				&.open 
+
+				&.open
 					box-shadow: 0 1px 1px 0 rgba(112, 112, 112, 0.5)
 					&:after
 						display: none
-						
+
 					.category-list__link
 						background-color: #f1f4f6
 						height: 56px
@@ -2117,8 +2230,8 @@ label
 					.category-dropdown
 						position: static
 						height: auto
-						
-				&.current:not(:hover) 
+
+				&.current:not(:hover)
 					.category-list__link
 						border-color: transparent
 				&:not(:last-child):after
@@ -2148,26 +2261,26 @@ label
 			flex: 1
 			&--list, &--grid
 				display: none
-			
+
 			a
 				padding-left: $z10
 				padding-right: $z10
-			span 
+			span
 				color: #707e85
 				font-weight: 400
-			.icon 
+			.icon
 				color: #707e85
 				width: $z20
 				height: $z20
 				margin-left: $z12
 			.badge
 				display: none
-				
+
 	/* Content ================= */
 	.box-category,
 	.category-card,
-	.category-toggle, 
-	.top-line, 
+	.category-toggle,
+	.top-line,
 	.content,
 	.content .m-content,
 	.main-wrap,
@@ -2188,16 +2301,16 @@ label
 				width: 100%
 
 	.content
-		&-wrap 
+		&-wrap
 			padding: $z20 $z10 !important
 
 
 
-		&-login 
+		&-login
 			padding: $z20 $z10
 			border-bottom: 1px solid #f1f4f6
 
-	
+
 
 	.search-result, .sidebar-content, .c-container, .boxes-bonus,
 	.boxes-fill-m
@@ -2206,7 +2319,7 @@ label
 	.boxes-button
 		padding: $z15 $z10
 
-	/* Sidebar ================= */	
+	/* Sidebar ================= */
 	.sidebar
 		width: 100%
 		margin-left: 0
@@ -2231,42 +2344,42 @@ label
 					vertical-align: middle
 					+arr(6, 3, #707e85, b)
 					margin-left: $z5
-		&-list 
+		&-list
 			padding: 0 $z10
-					
+
 		&-login
 			padding: $z20 $z10
 			&.visible-iphone
 				border-bottom: 1px solid #f1f4f6
-				p 
+				p
 					margin-bottom: 0
 
 		.boxes-button
 			padding: $z15 $z10
-			
+
 	.filter
 		.sidebar__title
 			text-align: right
 			padding: $z10
-			.b-btn 
+			.b-btn
 				float: none
 				margin-top: 0
 				width: auto
 				padding: 0.1875rem 0.8125rem
-				&__text 
+				&__text
 					display: block
-				.icon 
+				.icon
 					margin-right: $z6
 
 
 	.title-wrap
-		.b-btn 
+		.b-btn
 			padding-left: $z15
 			padding-right: $z15
 			width: auto
 			&__text
 				display: block
-			.icon 
+			.icon
 				margin-right: $z10
 
 
@@ -2277,7 +2390,7 @@ label
 	.contacts
 		max-width: none
 		padding: 0 $z20 $z40
-		&-wrap 
+		&-wrap
 			&__left
 				margin-left: -$z20
 				margin-right: -$z20
@@ -2286,7 +2399,7 @@ label
 
 	/* Autorized ================= */
 	.bl-massg
-		padding: $z20 $z10 
+		padding: $z20 $z10
 	.order
 		padding: $z20 $z10
 		&__title
@@ -2310,7 +2423,7 @@ label
 			position: static
 
 		&-available
-			margin-left: -0.3125rem	
+			margin-left: -0.3125rem
 
 	.boxes-bonus
 		display: block
@@ -2327,27 +2440,27 @@ label
 			&__item
 				padding-top: $z15
 				padding-bottom: $z15
-		
-	.article-list, 
+
+	.article-list,
 	.boxes__article .article-list
 		display: block
 		&__item
 			width: auto
-			
-	
-	.post 
+
+
+	.post
 		line-height: 1.5
 		font-size: $z14
 		h4.title
 			font-size: $z16
 			margin-bottom: $z20
-		p 
+		p
 			margin-bottom: $z20
 
 		figure
 			margin: $z30 auto
 
-	.rubrik 
+	.rubrik
 		margin-top: $z30
 		display: block
 		&-name
@@ -2359,7 +2472,7 @@ label
 
 	/* Payment ================= */
 	.wt-wrap
-		.tabs 
+		.tabs
 			margin-left: -$z10
 			margin-right: -$z10
 		.box-tab-cont
@@ -2370,22 +2483,22 @@ label
 
 	.bl-address
 		display: block
-		
+
 		margin-bottom: $z20
 		&__content
-			
+
 			padding-top: 0
 			padding-right: 0
 
 	.table-address--product
 		.table-address-head
 			display: none
-			
+
 	.table-address__tr
 		flex-wrap: wrap
 		&:last-child
 			border-bottom: none
-		
+
 	.table-address .col11
 		width: 100%
 		flex: none
@@ -2397,14 +2510,14 @@ label
 	.table-address__td
 		width: 50%
 		&:last-child
-			
+
 			justify-content: flex-end
 
 	.table-address-list
 		.table-address__td
 			width: 100%
 			&:last-child
-			
+
 				justify-content: flex-start
 
 	.table-address__td-ct
@@ -2412,11 +2525,11 @@ label
 		width: 50%
 		.col12
 			width: auto
-			
-	
+
+
 	.reauested
 		padding: $z40 $z20
-		
+
 		&-wrap
 			max-width: none
 			padding-left: 0
@@ -2432,7 +2545,7 @@ label
 
 	.req
 		display: block
-		&-input 
+		&-input
 			margin-bottom: $z20
 		&-cont
 			margin-left: 0
@@ -2440,29 +2553,29 @@ label
 			width: auto
 			flex-direction: row
 			.form-field
-				width: $z70 + $z60 
+				width: $z70 + $z60
 				margin-bottom: 0 !important
 				margin-right: $z15
 
 
-		
+
 	/* Card ================= */
 
-	.card 
+	.card
 		&__title
 			font-size: $z20
 			padding: $z15 $z10
 
-		&-wrap 
+		&-wrap
 			display: block
 			margin-bottom: 0
 			padding-left: $z10
 			padding-right: $z10
-			padding-bottom: 0	
+			padding-bottom: 0
 		&-slider
 			width: auto
 			max-width: none
-			margin-bottom: $z15	
+			margin-bottom: $z15
 			.slick-dots
 				position: absolute
 				bottom: $z10
@@ -2472,26 +2585,29 @@ label
 			display: block
 			width: auto
 			padding-left: 0
-			position: relative
-			&:after
-				content: ''
-				position: absolute
-				top: 0
-				bottom: 0
-				z-index: 1
-				pointer-events: none
-				width: $z10
-				right: -$z10
-				background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff)
+
+
 			&__left
 				padding-right: 0
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					z-index: 1
+					pointer-events: none
+					width: $z40
+					right: -$z10
+					background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff)
 				&-flex
 					display: flex
-					
+
 					margin-left: -$z5
 					padding-left: $z5
 					padding-bottom: $z10
-					margin-right: -$z10 
+					margin-right: -$z10
+
 			&__right
 				width: auto
 				display: flex
@@ -2501,45 +2617,44 @@ label
 				box-shadow: inset 0 1px 0 0 rgba(204, 204, 204, 0.5)
 				padding: $z20 $z10
 
-		&-icon 
+		&-icon
 			order: 1
 			width: 100%
-			br 
+			br
 				display: none
 			.data-link
-				margin-right: $z20
-			.data-link__text
-				display: none
-				
+
+			// .data-link__text
+			// 	display: none
+
 			.data-link__icon
-				margin-right: 0
+				// margin-right: 0
 				.icon
 					color: $color
 		&-count, &-price
 			order: 2
-				
-		&-count 
+
+		&-count
 			display: flex
 			align-items: center
 			margin-left: auto
 			margin-bottom: 0
 			.b-number
 				margin-bottom: 0
-			
+
 		&-price
-
+			margin-right: $z20
 			margin-bottom: 0
-		&-button 
-			margin-left: $z30
 
-				
-		&-descr 
+
+
+		&-descr
 			width: 45%
 			flex: none
 			padding-right: $z30
-			
-			
-			li 
+
+
+			li
 				display: block
 			&__title
 				display: block
@@ -2548,8 +2663,8 @@ label
 				display: block
 				padding-right: 0
 				.available
-					margin-left: -0.3125rem	
-		&-params 
+					margin-left: -0.3125rem
+		&-params
 			flex: 1
 			padding-right: $z10
 			white-space: nowrap
@@ -2560,12 +2675,12 @@ label
 	.tabs-title
 		padding-left: $z10
 		padding-right: $z10
-	
+
 	.cd-slider
 		margin-bottom: 0
 	.cd-slider-nav
 		display: none
-		
+
 	.specs-container
 		padding: 0
 		flex-direction: column
@@ -2578,20 +2693,77 @@ label
 		margin: 0 0  $z10
 		width: 100%
 		padding: $z20 $z10
-	
-	
+
+
 	.access
 		display: block
 		&__sidebar
 			width: auto
-			
+
+
+	.empty-card
+		padding: $z20 $z10
+		padding-bottom: 0
+		&__brand
+			padding-bottom: $z20
+			flex: none
+			margin: auto
+			width: 250px
+		&__price
+			position: relative
+
+
+			padding-top: $z30
+			padding-bottom: $z30
+			max-width: none
+			width: 100%
+			flex: none
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: -$z10
+				right: -$z10
+				border-top: 1px solid #f1f4f6
+			.card-price
+				width: auto
+
+			.card-button .b-btn
+				width: $z36 !important
+				flex: none
+				padding-left: $z3
+				padding-right: $z3
+				.icon
+					margin-right: 0
+
+				&__text
+					display: none
+
+			.card-icon
+				margin-top: $z20
+				order: 3
+				.data-link
+					margin-bottom: 0
+					&__icon
+						margin-right: $z10
+					&__text
+						display: block
+		&-foot
+			padding: $z20 $z10
+	.empty-card__brand .card-descr
+		padding-right: 0
+		width: auto
+		li
+			display: flex
+
 	/* Brands ================= */
 
 	.brands-popular
 		display: none
-	.line 
+	.line
 		display: none
-		
+
 	.sec-title
 		margin-bottom: $z15
 	.letters
@@ -2610,12 +2782,12 @@ label
 		padding-right: 0.625rem
 		&__list
 			column-count: 2
-	
+
 	.brand
 		margin-top: -$z10
 	.brand-wrap
 		display: block
-		&__left 
+		&__left
 			padding-right: 0
 		&__right
 			width: auto
@@ -2625,27 +2797,27 @@ label
 
 	.comparison-wrap
 		overflow-x: auto
-		
+
 	.comparison-wrap-sidebar
 		width: 150px
 
 	.comparison-wrap-content
 		max-width: 100%
-		
+
 	.comparison-column
 		display: flex
 	.com-row
 		width: 300px !important
 		flex: none
-	.com-box 
+	.com-box
 		padding: $z15 $z10
 		h4.title, span.title
 			font-size: $z16
 
-		&-list 
+		&-list
 			span
 				font-size: $z13
-				line-height: 1.4 
+				line-height: 1.4
 				margin: 0 (-$z10)
 				padding: $z5 $z10
 				word-wrap: break-word
@@ -2654,14 +2826,14 @@ label
 		&--flex
 			.b-btn--basket
 				display: none
-				
-			.b-btn 
-				padding: $z2 
+
+			.b-btn
+				padding: $z2
 				width: $z36
 				&__text
 					display: none
-					
-				.icon 
+
+				.icon
 					margin-right: 0
 
 			.label-text
@@ -2674,33 +2846,33 @@ label
 
 	.page-error
 		padding: 5rem $z30
-		&__img 
+		&__img
 			margin-bottom: $z30
-			img 
+			img
 				margin: 0 auto
 				max-width: 100px
 		&__content
-			h1 
+			h1
 				font-size: $z20
-			p 
+			p
 				font-size: $z14
 
 	/* Fancybox ================= */
-	
-	#fancybox-thumbs ul li 
+
+	#fancybox-thumbs ul li
 		padding: 0 $z5
 		&.active
 			border: none
 			padding: 0 $z5
-			a 
+			a
 				background-color: $color-info
-		a 
+		a
 			width: 10px !important
 			height: 10px !important
 			background: rgba(0,0,0,0.1)
 			border-radius: 50%
 
-			img 
+			img
 				display: none
 
 	.fancybox-nav
@@ -2711,12 +2883,12 @@ label
 
 	.fancybox-next
 		display: none
-		
-	.fancybox-prev 
-		display: none
-		
 
-	/* Footer ================= */	
+	.fancybox-prev
+		display: none
+
+
+	/* Footer ================= */
 	.footer
 		&-wrap
 			padding-top: $z30
@@ -2732,7 +2904,7 @@ label
 				&:first-child
 					order: 1
 					text-align: center
-					
+
 
 
 				&:last-of-type
@@ -2741,8 +2913,8 @@ label
 			&__title
 				font-size: $z13
 				margin-bottom: 1.8rem
-		&-list 
-			&__item 
+		&-list
+			&__item
 				margin-bottom: .9rem
 				line-height: 1
 			&__link
@@ -2752,8 +2924,8 @@ label
 			margin-bottom: $z15
 		&-logo, .visa
 			img
-				margin: 0 auto 
-	.overlay.open 
+				margin: 0 auto
+	.overlay.open
 		display: none !important
 
 +max-screen(560px)
@@ -2768,7 +2940,7 @@ label
 		&-title
 			padding-right: $z40
 		&-form
-			.btn 
+			.btn
 				width: 100%
 				display: flex
 
@@ -2779,13 +2951,13 @@ label
 
 	.radio-tabs
 		display: block
-		&__item 
+		&__item
 			padding-right: 0
 			margin-bottom: $z15
 			&:last-child
 				margin-bottom: 0
 
-	
+
 	/* Category ================= */
 	.category-dropdown
 		&>div
@@ -2800,7 +2972,7 @@ label
 				margin-right: auto
 				margin-bottom: $z20
 
-			&__icon 
+			&__icon
 				position: static
 				width: 40%
 			&__available
@@ -2813,12 +2985,12 @@ label
 				text-align: left
 				flex: 1
 				width: auto
-				
+
 				margin-right: $z10
-			&__count 
+			&__count
 				margin-right: $z30
 
-	.boxes-product--cart 
+	.boxes-product--cart
 		.product__img
 			margin-right: auto
 		.product__title
@@ -2835,15 +3007,15 @@ label
 		.product__price
 			order: 2
 			flex: 1
-		.product__button 
+		.product__button
 			order: 3
 
-	.articul + .articul 
+	.articul + .articul
 		margin-left: $z30
 	.product
 		display: block
 		padding: $z20 $z10
-		&__img 
+		&__img
 			margin-left: auto
 			margin-right: auto
 			margin-bottom: $z20
@@ -2856,37 +3028,49 @@ label
 
 		.b-btn
 			width: $z36
-			padding: 0 
+			padding: 0
 			&__text
 				display: none
-				
+
 			.icon
 				margin-right: 0
 
 	/* Contacts ================= */
 	.address-wrap
 		display: block
-		.address-bl 
+		.address-bl
 			width: auto
 			&--full
 				width: auto
-				
+
 
 	/* Card ================= */
 	.card
 		&-price
-			font-size: $z15
+			font-size: $z16
 			margin-bottom: 0
-		&-button 
-			margin-left: $z20
+		&-button
 			.b-btn
 				width: $z36
 				padding-left: $z5
 				padding-right: $z5
 				&__text
 					display: none
-				.icon 
+				.icon
 					margin-right: 0
+
+		&-count
+			padding-top: 0
+
+		&-icon
+
+			.data-link__text
+				display: none
+			.data-link__icon
+				margin-right: 0
+
+		.card-descr__text .available
+			margin-left: 0
 
 
 	/* Brands ================= */

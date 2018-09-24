@@ -1,6 +1,6 @@
 
 
-.card 
+.card
 	&__title
 		font-size: $z30
 		margin: 0
@@ -13,15 +13,17 @@
 		width: 42.6%
 		// max-width: 606px
 		flex: none
-		
+
 	&-details
 		display: flex
 		width: 55%
 		flex: 1
 		padding-left: $z30
 		&__left
-			padding-right: $z30
 			flex: 1
+
+			&-flex
+				padding-right: $z30
 		&__right
 			width: 40%
 			min-width: 260px
@@ -29,7 +31,7 @@
 	&-descr
 		list-style: none
 		margin-bottom: $z20
-		li 
+		li
 			display: flex
 			align-items: center
 			font-size: $z13
@@ -42,7 +44,7 @@
 			color: #707e85
 			width: $z50 + $z50
 
-	&-params 
+	&-params
 		&__title
 			color: #707e85
 			font-size: $z13
@@ -50,9 +52,10 @@
 			display: block
 		&-list
 			list-style: none
-			li 
+			li
 				font-size: $z13
 				line-height: 1.54
+
 
 	&-price
 		font-size: $z30
@@ -61,22 +64,22 @@
 		.bonus
 			font-size: $z13
 			color: #f57523
-			
-	&-count 
+
+	&-count
 		display: flex
 		margin-bottom: $z50
 		.b-number
 			margin-right: $z20
-	&-button 
+	&-button
 		.b-btn
 			background: $color-info
 			border-color: $color-info
 			color: #fff
-			.icon 
+			.icon
 				color: #fff
 
 	&-icon
-		.data-link 
+		.data-link
 			margin-bottom: $z16
 
 	.sort
@@ -88,7 +91,7 @@
 	display: inline-flex
 	align-items: center
 	color: #707e85
-	&__icon 
+	&__icon
 		width: $z28
 		height: $z28
 		display: flex
@@ -99,28 +102,28 @@
 		border-radius: 2px
 	&__text
 		font-size: $z13
-		
-	.icon 
+
+	.icon
 		width: $z20
 		height: $z20
 		color: #BBC2C4
 	&.add
 		.data-link__icon
 			background-color: #f57523
-			.icon 
+			.icon
 				color: #fff
 	&:hover
 		color: $color
 		.icon
 			color: $color
-	
+
 
 .cd-slider
 	margin-bottom: $z10
-	img 
+	img
 		width: 100%
 
-.cd-slider-nav 
+.cd-slider-nav
 	text-align: center
 	padding: 0 $z40
 	margin: 0 auto
@@ -138,7 +141,7 @@
 		background-color: transparent
 		width: auto
 		height: auto
-		.icon 
+		.icon
 			color: #202528
 			width: $z16
 			height: $z11
@@ -173,7 +176,7 @@
 	display: block
 	padding: $z25 $z30
 	text-align: center
-	.icon 
+	.icon
 		color: $color-info
 		font-size: $z16
 		vertical-align: middle
@@ -181,10 +184,7 @@
 	.icon-arrow-forward
 		transform: rotate(-90deg)
 
-
-
-
-.progress 
+.progress
 	display: block
 	width: 100%
 	height: $z4
@@ -205,8 +205,6 @@
 	clip: rect(0,0,0,0)
 	border: 0
 
-
-
 .boxes-product.slick-slider
 
 	.slick-track
@@ -216,7 +214,6 @@
 		display: flex
 		margin-bottom: 1px
 		box-sizing: border-box
-
 
 /* Аксессуары */
 .access
@@ -230,7 +227,7 @@
 				label
 					&:after
 						display: none
-						
+
 	&__content
 		flex: 1
 		.boxes-product
@@ -241,7 +238,7 @@
 	display: flex
 	align-items: flex-start
 	padding: $z30
-	h4 
+	h4
 		font-size: $z20
 		font-weight: 400
 		margin: 0 0 $z16
@@ -257,7 +254,7 @@
 	&-list
 		list-style: none
 		margin-top: $z30
-		li 
+		li
 			color: #707e85
 			font-size: $z15
 			margin-bottom: $z10
@@ -273,7 +270,6 @@
 			&:last-child
 				margin-bottom: 0
 
-
 .specs-table
 	margin-bottom: $z30
 	&:last-child
@@ -284,12 +280,12 @@
 	margin-bottom: $z10
 	&:last-child
 		margin-bottom: 0
-.specs-td 
+.specs-td
 	width: 50%
 	padding-right: $z20
 	font-size: $z15
 	color: #707e85
-	span 
+	span
 		display: block
 		margin-bottom: $z10
 		&:last-child
@@ -305,3 +301,31 @@
 	&>*:last-child
 		margin-bottom: 0
 
+/* Empty Card */
+
+.empty-card
+	display: flex
+	align-items: flex-start
+	padding: $z40 $z35
+	&__head
+		flex: 1
+		padding: 0 $z50
+	&__brand
+		flex: none
+		width: $z70 + $z70 + $z70 + $z20
+	&__price
+		flex: none
+		width: $z70 + $z70  + $z70 + $z50
+	.card__title
+		padding: 0
+	.brand
+		margin-top: 0
+		margin-bottom: $z30
+
+	&-foot
+		padding: $z30 $z35
+		h4.title
+			margin-bottom: $z20
+		p
+			font-size: $z13
+			line-height: 1.84
